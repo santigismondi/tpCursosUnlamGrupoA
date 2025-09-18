@@ -111,8 +111,8 @@ main{
 
 @media (max-width: 768px) {
     .navegador{
-        background: linear-gradient(#000000, #0e0e0e);
-    }
+        background: linear-gradient(#6a6a6a, #484848);
+}
     .contenedorFooter{
         display: none;
     }

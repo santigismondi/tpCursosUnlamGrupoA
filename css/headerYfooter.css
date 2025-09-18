@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Netflix Sans','Helvetica Neue','Segoe UI','Roboto','Ubuntu','sans-serif';
-    background-color: #484848;
+    background-color: #222222;
 }
 body {
     display: flex;
@@ -29,7 +29,7 @@ main{
     align-items: center;
     padding: 10px;
     font-weight: 300;
-    background: linear-gradient(#6a6a6a, #484848);
+    background: linear-gradient(#444444, #222222);
 }
 .logo{
     display: flex;
@@ -59,7 +59,7 @@ main{
 .headerListItem:hover{
     cursor: pointer;
     border: #ffffff solid 0px;
-    background-color: #414141;
+    background-color: #555555;
     transition-duration: 0.3s;
 }
 .botonNav{
@@ -77,7 +77,7 @@ main{
 .headerListItemRegistrarse:hover{
     cursor: pointer;
     border: #ffffff solid 0px;
-    background-color: #414141;
+    background-color: #555555;
     transition-duration: 0.3s;
 }
 .botonNavRegistrarse{
@@ -100,18 +100,28 @@ main{
 }
 .contenedorFooter{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     width: 100%;
-    border: 1px solid #484848;
-    font-size: 1.5em;
-    background-color: #484848;
+    border: 1px solid #222222;
+    font-size: 1em;
+    background-color: #222222;
     color: #ffffff;
     font-weight: 300;
 }
-
+.footerList{
+    list-style: none;    
+    gap: 15px;
+}
+.footerList a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .navegador{
-        background: linear-gradient(#000000, #0e0e0e);
+        background: linear-gradient(#444444, #222222);
     }
     .contenedorFooter{
         display: none;
@@ -137,6 +147,6 @@ main{
     .headerListItem:hover{
         cursor: pointer;
         border: none;
-        background: linear-gradient(#000000, #0e0e0e);
+        background: linear-gradient(#444444, #222222);
     }
 }
