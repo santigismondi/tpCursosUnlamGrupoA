@@ -13,6 +13,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+main{
+    width: 80%;
+    margin: 0 auto;    
+    flex-grow: 1; 
+}
 .navegador{
     display: flex;
     justify-content: space-between;
