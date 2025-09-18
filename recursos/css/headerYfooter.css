@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Netflix Sans','Helvetica Neue','Segoe UI','Roboto','Ubuntu','sans-serif';
+    background-color: #484848;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navegador{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    align-items: center;
+    padding: 10px;
+    font-weight: 300;
+    background: linear-gradient(#6a6a6a, #484848);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logoUnlam{
+    width: 70px;
+    height: 70px;
+}
+.logoDescripcion{
+    font-weight: 1000;
+    font-size: 1.5em;
+    margin-left: 10px;
+    color:#ffffff;
+    text-decoration: none;
+}
+.headerList{
+    display: flex;
+    list-style: none;
+    padding-right: 40px;
+}
+.headerListItem{
+    text-decoration: none;
+    color: #000000;
+    border-radius: 40px;
+}
+.headerListItem:hover{
+    cursor: pointer;
+    border: #ffffff solid 0px;
+    background-color: #414141;
+    transition-duration: 0.3s;
+}
+.botonNav{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 5px;
+}
+.headerListItemRegistrarse{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 40px;
+}
+.headerListItemRegistrarse:hover{
+    cursor: pointer;
+    border: #ffffff solid 0px;
+    background-color: #414141;
+    transition-duration: 0.3s;
+}
+.botonNavRegistrarse{
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    margin: 0 5px;
+    font-weight: 400;
+}
+.botonNavRegistrarse:hover{
+    color: #ffffff;
+    transition-duration: 0.3s;
+}
+
+.iconoNav{
+    display: none;
+}
+.contenedorMain{
+    flex-grow: 1;
+}
+.contenedorFooter{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #484848;
+    font-size: 1.5em;
+    background-color: #484848;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .navegador{
+        background: linear-gradient(#000000, #0e0e0e);
+    }
+    .contenedorFooter{
+        display: none;
+    }
+    .iconoNav{
+        display: block;
+    }
+    .logo a{
+        display: none;
+    }
+    .headerList{
+        padding: 0;
+    }
+    .textoNav{
+        display: none;
+    }
+
+    .headerListItem{
+        margin-right: 25px;
+        font-size: 1em;
+    }
+
+    .headerListItem:hover{
+        cursor: pointer;
+        border: none;
+        background: linear-gradient(#000000, #0e0e0e);
+    }
+}
