@@ -1,0 +1,125 @@
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+.contenedorMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedorPrincipal{
+    background-color: #111111;
+    margin: 5%;
+    border-radius: 50px;
+    box-shadow: #111111 0px 4px 8px 0px;
+    width: 80%;
+}
+.contenedorTitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+.logoUnlamIndex{
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.contenedorFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: 50%;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulosForm{
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+}
+.inputForm{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #006aff;
+    color:#ffffff;
+    background-color: #111111;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.botonFormLogin, .botonFormRegistrarse{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+.botonFormLogin{
+    color: #006aff;
+    cursor: pointer;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: #006aff solid 2px;
+}
+.botonFormRegistrarse{
+    background-color: #006aff;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+}
+
+.botonFormRegistrarse a{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.linkRecuperarClave{
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+@media(max-width: 768px){
+    h1, h2{
+        font-size: 1.5em;
+    }
+    .contenedorPrincipal{
+        width: 90%;
+        margin: 10px;
+    }
+    .contenedorFormulario{
+        width: 80%;
+    }
+    .inputForm{
+        font-size: 1.2em;
+    }
+    .titulosForm{
+        font-size: 1.2em;
+    }
+    .botonFormLogin, .botonFormRegistrarse{
+        font-size: 1em;
+        height: 40px;
+    }
+}

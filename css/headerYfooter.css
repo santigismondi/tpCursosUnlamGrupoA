@@ -78,6 +78,7 @@ main{
     margin: 0 5px;
 }
 .headerListItemRegistrarse{
+    display: flex;
     background-color: #ffffff;
     text-decoration: none;
     color: #ffffff;
@@ -86,7 +87,8 @@ main{
 .headerListItemRegistrarse:hover{
     cursor: pointer;
     border: #ffffff solid 0px;
-    background-color: #555555;
+    background-color: #006aff;
+    color: #ffffff;
     transition-duration: 0.3s;
 }
 .botonNavRegistrarse{
@@ -148,6 +150,11 @@ main{
     border-radius: 50%;
     color: #ffffff;
     cursor: pointer;
+}
+.fa-magnifying-glass:hover{
+    color: #006aff;
+    background-color: #ffffff;
+    transition-duration: 0.3s;
 }
 .contenedorFooter{
     display: flex;
