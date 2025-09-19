@@ -10,49 +10,71 @@
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="headerInicio">
         <nav class="navegador">
             <section class="logo">
-                <a class="logoDescripcion">Cursos UNLaM</a>  
+                <a class="logoDescripcion" href="../html/inicio.html">
+                    <img class="logoUnlam" 
+                    src="../recursos/img/logoUnlamAzul.png"
+                    alt="Logo de Unlam">
+                    <span>EdUNLaM</span>
+                </a>
             </section>
      
             <ul class="headerList">
                 <li class="headerListItem">
-                    <span class="iconoNav"><i class="fa-solid fa-house"></i></span>
-                    <a class="botonNav" href="../html/inicio.html">Inicio</a>
+                    <a class="botonNav" href="../html/inicio.html">
+                        <span class="iconoNav"><i class="fa-solid fa-house"></i></span>
+                        <span class="textoNav">Inicio</span>
+                    </a>
                 </li>
                 <li class="headerListItem">
-                    <span class="iconoNav"><i class="fa-solid fa-briefcase"></i></span>
-                    <a class="botonNav" href="../html/empresas.html">Empresas</a>
+                    <a class="botonNav" href="./inscripcionEmpresas.html">
+                        <span class="iconoNav"><i class="fa-solid fa-briefcase"></i></span>
+                        <span class="textoNav">Empresas</span>
+                    </a>
                 </li>
                 <li class="headerListItem">
-                    <span class="iconoNav"><i class="fa-solid fa-gift"></i></span>
-                    <a class="botonNav" href="../html/giftCard.html">Gift Card</a>
+                    <a class="botonNav" href="./giftCard.html">
+                        <span class="iconoNav"><i class="fa-solid fa-gift"></i></span>
+                        <span class="textoNav">Gift Card</span>
+                    </a>
                 </li>
                 <li class="headerListItem">
-                    <span class="iconoNav"><i class="fa-solid fa-calendar"></i></span>
-                    <a class="botonNav" href="../html/calendario.html">Calendario</a>
+                    <a class="botonNav" href="./calendario.html">
+                        <span class="iconoNav"><i class="fa-solid fa-calendar"></i></span>
+                        <span class="textoNav">Calendario</span>
+                    </a>
                 </li>
                 <li class="headerListItem">
-                    <span class="iconoNav"><i class="fa-solid fa-envelope-open"></i></span>
-                    <a class="botonNav" href="../html/contacto.html">Contactanos</a>
+                    <a class="botonNav" href="./contacto.html">
+                        <span class="iconoNav"><i class="fa-solid fa-envelope-open"></i></span>
+                        <span class="textoNav">Contactanos</span>
+                    </a>
                 </li>
             </ul>
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNav"><i class="fa-solid fa-cart-shopping"></i></span>
-                        <span class="textoNav">Carrito</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
                 <li class="headerListItem">
-                    <a class="botonNav" href="../html/miPerfil.html">
+                    <a class="botonNav" href="./miPerfil.html">
                         <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
                         <span class="textoNav">Mi Perfil</span>
                     </a>
                 </li>
             </ul>
         </nav>
+        <section class="elementosHeader">
+            <form action="" class="formularioBuscador">
+                <label for="" class="labelBuscar">Buscar</label>
+                <input type="text" class="inputBuscar" placeholder="" id="buscador">
+                <span><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></span>
+            </form>
+        </section>
     </header> 
     <main class="contenedorMain">
         
@@ -66,16 +88,16 @@
             <li>Vazquez Espíndola Mario Alberto</li>
         </ul>
         <ul class="footerList">
-            <li><a href="../html/empresas.html">Empresas</a></li>
-            <li><a href="../html/giftCard.html">Crea tu Gift Card</a></li>
-            <li><a href="../html/calendario.html">Calendario de cursos</a></li>
-            <li><a href="../html/contacto.html">Atencion al cliente</a></li>
+            <li><a href="./inscripcionEmpresas.html">Inscripción para empresas</a></li>
+            <li><a href="./giftCard.html">Crea tu Gift Card</a></li>
+            <li><a href="./calendario.html">Calendario de cursos</a></li>
+            <li><a href="./contacto.html">Atencion al cliente</a></li>
         </ul>
         <ul class="footerList">
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://www.twitter.com/">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i> - Instagram</a></li>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i> - Facebook</a></li>
+            <li><a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter"></i> - Twitter</a></li>
+            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i> - LinkedIn</a></li>
         </ul>
     </footer>
 </body>
