@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: stretch;
     margin-bottom: 20px;
-    background-color: #ddd;
+    background-color: #dedede;
 }
 .imgCurso{
     width: 100%;
@@ -70,7 +70,7 @@
 
 .detallesCurso{
     background-color: #004AAD;
-    color: white;
+    color: #dedede;
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -85,13 +85,30 @@
 
 .agregarCurso{
     background-color: #004AAD;
-    color: white;
+    color: #dedede;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     margin-top: 10px;
+}
+.contenedorMediosDePago{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.medioDePago{
+    display: flex;
+    width: 30%;
+    height: 100px;
+    background-color: #dedede;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
