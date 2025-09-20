@@ -1,7 +1,7 @@
-[
+DATOS_CURSOS=[
   {
     "id": 1,
-    "imagenUrl": "./recursos/img/cursos/curso-html-css.png",
+    "imagenUrl": "../recursos/img/cursos/html.avif",
     "titulo": "Desarrollo Web: HTML y CSS desde Cero",
     "precio": {
       "valor": 50,
@@ -57,8 +57,8 @@
   },
   {
     "id": 2,
-    "imagenUrl": "./recursos/img/cursos/curso-javascript.png",
-    "titulo": "JavaScript Moderno: El Curso Definitivo",
+    "imagenUrl": "../recursos/img/cursos/javascript.avif",
+    "titulo": "JavaScript Desde Cero",
     "precio": {
       "valor": 75,
       "moneda": "USD"
@@ -100,7 +100,7 @@
   },
   {
     "id": 3,
-    "imagenUrl": "./recursos/img/cursos/curso-nodejs.png",
+    "imagenUrl": "../recursos/img/cursos/nodeJs.avif",
     "titulo": "Backend con Node.js y Express",
     "precio": {
       "valor": 90,
@@ -140,7 +140,7 @@
   },
   {
     "id": 4,
-    "imagenUrl": "./recursos/img/cursos/curso-python-django.png",
+    "imagenUrl": "../recursos/img/cursos/django.avif",
     "titulo": "Python para Backend con Django",
     "precio": {
       "valor": 95,
@@ -148,8 +148,8 @@
     },
     "dedicacion": "10 horas semanales",
     "docente": {
-      "nombre": "Sofía Rossi",
-      "fotoUrl": "./recursos/img/cursos/docente-sofia.jpg",
+      "nombre": "Juanjo Ruiz",
+      "fotoUrl": "./recursos/img/cursos/docente-juanjo.jpg",
       "extracto": "Desarrolladora Python con experiencia en aplicaciones web a gran escala.",
       "valoracion": 5
     },
@@ -174,7 +174,7 @@
   },
   {
     "id": 5,
-    "imagenUrl": "./recursos/img/cursos/curso-sql.png",
+    "imagenUrl": "../recursos/img/cursos/sql.avif",
     "titulo": "Bases de Datos con SQL desde Cero",
     "precio": {
       "valor": 60,
@@ -212,8 +212,8 @@
   },
   {
     "id": 6,
-    "imagenUrl": "./recursos/img/cursos/curso-mongodb.png",
-    "titulo": "Introducción a Bases de Datos NoSQL con MongoDB",
+    "imagenUrl": "../recursos/img/cursos/mongodb.avif",
+    "titulo": "Bases de Datos NoSQL con MongoDB",
     "precio": {
       "valor": 70,
       "moneda": "USD"
