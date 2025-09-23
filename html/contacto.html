@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos Unlam</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/contacto.css">
-    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png"> 
+    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png">
+    <link rel="shortcut icon" href="../recursos/img/InfoDeContacto.jpg">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="headerInicio">
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -56,7 +57,8 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
@@ -75,36 +77,50 @@
                 <span><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></span>
             </form>
         </section>
-    </header> 
-    <main >
+    </header>
+    <main>
         <h1 class="tituloContacto">Contacto</h1>
         <section class="contenedorContacto">
             <form class="formularioContacto">
-                
-                <input type="text" id="nombre" name="nombre" class="inputContacto" placeholder="Ingrese su nombre" required>
 
-                
-                <input type="email" id="email" name="email" class="inputContacto" placeholder="Ingrese su email " required>
+                <input type="text" id="nombre" name="nombre" class="inputContacto" placeholder="Ingrese su nombre"
+                    required>
 
-                
-                <input type="tel" id="tel" name="tel" class="inputContacto" placeholder="Ingrese su N° de telefono" required>
 
-                
-                <textarea id="mensaje" name="mensaje" class="textareaContacto"    placeholder="Escriba su consulta" required></textarea>
+                <input type="email" id="email" name="email" class="inputContacto" placeholder="Ingrese su E-mail "
+                    required>
+
+
+                <input type="tel" id="tel" name="tel" class="inputContacto" placeholder="Ingrese su N° de telefono"
+                    required>
+
+
+                <textarea id="mensaje" name="mensaje" class="textareaContacto" placeholder="Escriba su consulta"
+                    required></textarea>
             </form>
             <section class="datosContacto">
-                <h2 class="subtituloContacto">Datos de la empresa</h2>
-                <p class="parrafoContacto">Telefono: 011-1234-5678</p>
-                <p class="parrafoContacto">Email:
+                <h2 class="subtituloContacto">Informacion de contacto</h2>
+                <img src="../recursos/img/InfoDeContacto.jpg" alt="imagen de contacto">
+
+                <ul class="listaContacto">
+                    <li><a href="htpps://www.Unlam.cedu.ar/"></a><i class="fa-solid fa-globe"></i>www.Unlam.edu.ar</li>
+                    <li><a href="htpps://www.whatsApp.com/"></a><i
+                            class="fa-solid fa-envelope"></i>cursos@unlam.edu.ar</li>
+                    <li><a href="htpps://www.whatsApp.com/"></a><i class="fa-brands fa-whatsapp"></i>whatsApp</li>
+                </ul>
             </section>
         </section>
         <section class="contenedorBoton">
             <button type="submit" class="botonEnviar">Enviar</button>
-        </section>  
+        </section>
         <section class="contenedorMapa">
             <h2 class="tituloDos">Ubicacion</h2>
-            <img src="../recursos/img/Mapa.png" alt="imagen contacto" class="imagenContacto">
-        </section>     
+            <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64007.229304107954!2d-58.57808790316856!3d-34.66197265203925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1758577041102!5m2!1ses-419!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
     </main>
     <footer class="contenedorFooter">
         <ul class="footerList">
@@ -128,4 +144,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
