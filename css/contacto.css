@@ -24,23 +24,26 @@ main{
       
 }
 .formularioContacto input {
-    border: 0.065em solid #0c0000 ;
+    border: 0.065em solid #f5ecec ;
     border-radius: 0.4em;
     width: 100%;
     height: 3em;
+    background-color: #222222;
 }
 .formularioContacto textarea{
     width: 100%;
     height: 6em;
     border-radius: 0.4em;
     padding-top: 0.4em;
-    
+    background-color: #222222;
+    border: 0.065em solid #f5ecec ;
 }
 .datosContacto{
     width: 100%;
     height: 17em;
     border-radius: 0.4em;
-    border: 0.065em solid #b6c4f3 ;   
+    border: 0.065em solid #b6c4f3 ; 
+    background-color: #222222;  
     display: grid;
     font-weight: bold;
     grid-template-columns: 1fr 1fr;
@@ -60,7 +63,8 @@ main{
     height: 2.5em;
     border-radius: 0.4em;
     border: none;
-    background-color: #7a7373;
+    background-color: #222222;
+    border: 0.1em solid #eff1f3 ;
     color: white;
     font-weight: bold;    
     cursor: pointer;
@@ -70,14 +74,14 @@ main{
        
 }
 .botonEnviar:hover{
-    background-color: #5c5555;
+    background-color: #222222;
     transition-duration: 0.3s;
-    border: 0.2em solid #006aff ;
+    border: 0.1em solid #006aff ;
     transform: scale(1.1);
 }
 .formularioContacto  input::placeholder, textarea::placeholder{
     padding-left: 0.5em;
-    color: #706b6b;
+    color: #dbd4d4;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     margin-top: 0.2em;
@@ -116,7 +120,7 @@ main{
     justify-content: center;
     align-items: start;
     color: #faf9f9;
-    background-color: #7a7373;
+    border: 0.065em solid #2222 ;
     border: 0.065em  solid #b6c4f3 ;
 }
 iframe{
@@ -130,7 +134,7 @@ iframe{
     border: 0.065em solid #b6c4f3 ;
 }
 iframe:hover{
-    border: 0.2em solid #006aff;
+    border: 0.1em solid #006aff;
    
 }
 .listaContacto{
@@ -145,8 +149,12 @@ iframe:hover{
     box-shadow: #0c0000 0px 4px 8px 0px;
     font-size: 1.2em;
     color: rgb(243, 246, 248);
-    background-color: rgb(52, 62, 82);
+    background-color: #222222;
     border: 0.065em  solid #b6c4f3 ;
+}
+.listaContacto:hover{
+    border: 0.1em solid #006aff ;
+    transition-duration: 0.3s;
 }
 
 svg{
