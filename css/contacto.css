@@ -40,7 +40,7 @@ main{
     width: 100%;
     height: 17em;
     border-radius: 0.4em;
-    border: 0.065em solid #0c0000 ;
+    border: 0.065em solid #b6c4f3 ;   
     display: grid;
     font-weight: bold;
     grid-template-columns: 1fr 1fr;
@@ -66,7 +66,14 @@ main{
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-    
+    box-shadow: #0c0000 0px 4px 8px 0px;
+       
+}
+.botonEnviar:hover{
+    background-color: #5c5555;
+    transition-duration: 0.3s;
+    border: 0.2em solid #006aff ;
+    transform: scale(1.1);
 }
 .formularioContacto  input::placeholder, textarea::placeholder{
     padding-left: 0.5em;
@@ -74,13 +81,18 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     margin-top: 0.2em;
+    
+}
+.formularioContacto input:hover, textarea:hover{
+    border: 0.2em solid #006aff ;
+    transition-duration: 0.3s;
 }
 .contenedorMapa{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     height:auto;
     border-radius: 0.4em;
     object-fit: cover;
@@ -103,28 +115,96 @@ main{
     display: flex;
     justify-content: center;
     align-items: start;
-   color: #faf9f9;
-   margin-bottom: 0.4em;
+    color: #faf9f9;
+    background-color: #7a7373;
+    border: 0.065em  solid #b6c4f3 ;
 }
-img{
+iframe{
     grid-area: foto;
-    width: 80%;
-    height: 14em;
-    border-radius: 0.4em;
-    object-fit: cover;
+    width: 95%;
+    height: 13em;
+    border-radius: 0.4em;  
+    justify-self: center;
+    align-self: center;
+    box-shadow: #0c0000 0px 4px 8px 0px;
+    border: 0.065em solid #b6c4f3 ;
+}
+iframe:hover{
+    border: 0.2em solid #006aff;
+   
 }
 .listaContacto{
     grid-area: info;
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1.5em;
-    padding-left: 1em;
+    padding: 1em;
+    margin: 0.5em;
+    box-shadow: #0c0000 0px 4px 8px 0px;
     font-size: 1.2em;
     color: rgb(243, 246, 248);
+    background-color: rgb(52, 62, 82);
+    border: 0.065em  solid #b6c4f3 ;
 }
-.listaContacto li i{
-    color: #006aff;
+
+svg{
+    width: 1.2em;
+    height: 1.2em;    
+}
+svg:hover{
+    transform: scale(1.2);
+}
+.iconos{
+    color: #e1e7e7;
     margin-right: 0.5em;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;    
+}
+.iconos:hover{
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}
+@media (max-width: 768px){
+    .contenedorContacto{
+        grid-template-columns: 1fr;        
+    }
+    .datosContacto{
+        height: auto;
+        grid-template-areas: "titulo"
+                             "foto"
+                             "info";        
+    }
+    iframe{
+        width: 90%;
+        height: 10em;        
+    }
+    .listaContacto{
+        font-size: 1em;
+        gap: 1em;
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+    .formularioContacto{
+        gap: 1em;
+    }
+    .formularioContacto input {
+        height: 2.5em;        
+    }
+    .formularioContacto textarea{
+        height: 5em;        
+    }
+    .botonEnviar{
+        width: 7em;
+        height: 2em;
+        font-size: 1em;        
+    }
+    .subtituloContacto{
+        font-size: 1.2em;
+    }
 }
