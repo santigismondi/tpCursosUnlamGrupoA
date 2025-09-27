@@ -6,7 +6,7 @@
     <title>EdUNLaM</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/recuperarClave.css">
-    <link rel="shortcut icon" href="../recursos/img/logoUnlam.png"> 
+    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png"> 
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,16 +22,37 @@
             </section>
             <ul class="headerList">
                 <li class="headerListItem">
-                    <a class="botonNav" href="">Inicia Sesion</a>
+                    <a class="botonNav" href="../index.html">Inicia Sesion</a>
                 </li>
                 <li class="headerListItemRegistrarse">
-                    <a class="botonNavRegistrarse" href="./html/registrarse.html">Registrate</a>
+                    <a class="botonNavRegistrarse" href="./registrarse.html">Registrate</a>
                 </li>
             </ul>
         </nav>
     </header> 
     <main class="contenedorMain">
+        <section class="contenedorPrincipalRecuperarClave">
+            <section class="contenedorTituloRecuperarClave">
+                <h1 class="tituloRecuperarClave">Recuperar Contraseña</h1>
+                <h2 class="subtituloRecuperarClave">Ingresa tu correo electrónico para restablecer tu contraseña</h2>
+            </section>
+            <section class="contenedorFormularioRecuperarClave">
+                <form class="formularioRecuperarClave" id="formRecuperarClave" action="">
+                    <label for="email" class="titulosFormRecuperarClave">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" class="inputFormRecuperarClave" required>
 
+                    <label for="newPassword" class="titulosFormRecuperarClave">Ingresa tu nueva contraseña:</label>
+                    <input type="password" id="newPassword" name="newPassword" class="inputFormRecuperarClave" required>
+
+                    <label for="confirmPassword" class="titulosFormRecuperarClave">Confirma tu nueva contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="inputFormRecuperarClave" required>
+
+                    <button type="submit" id="btnRecuperarClave" class="botonFormRecuperarClave">
+                        Enviar
+                    </button>
+                </form>
+            </section>
+        </section>
     </main>
     <footer class="contenedorFooter">
         <ul class="footerList">

@@ -82,11 +82,27 @@ h1, h2 {
     cursor: pointer;
     border: #006aff solid 2px;
 }
+
+.botonFormLogin:hover{
+    background-color: #ffffff4e;
+    color:#ffffff;
+    border: #ffffff solid 2px;
+    transition: 0.3s;
+}
+
 .botonFormRegistrarse{
     background-color: #006aff;
     cursor: pointer;
     border: #ffffff solid 2px;
     color:#ffffff;
+    
+}
+
+.botonFormRegistrarse:hover{
+    background-color: #ffffff4e;
+    color:#ffffff;
+    border: #ffffff solid 2px;
+    transition: 0.3s;
 }
 
 .linkRecuperarClave{
@@ -95,6 +111,13 @@ h1, h2 {
     margin-top: 15px;
     font-size: 1.2em;
     margin: auto;
+}
+
+.linkRecuperarClave:hover{
+    color: #006aff;
+    font-size: 1.3em;
+    transition: 0.3s;
+
 }
 
 @media(max-width: 768px){
