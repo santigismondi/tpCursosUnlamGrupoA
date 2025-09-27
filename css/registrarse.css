@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+.titulo-registrarse{
+    color: white;
+    padding-bottom: 1em;
+}
+
+h1{
+    color: white;
+}
+.campo{
+    color: white;
+}
