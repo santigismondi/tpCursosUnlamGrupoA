@@ -1,0 +1,110 @@
+
+.portadaCurso {
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid #004AAD;
+}
+
+.imgDocente {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    border: 3px solid #004AAD;
+}
+
+.contenedorMain {
+    color: white;
+}
+
+.descripcionCurso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detallesDocente {
+    display: flex;
+}
+
+.docente {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrusel {
+    display: flex;
+    gap: 5%;
+    margin: 2rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.curso {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    padding: 15px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 20px;
+    background-color: #dedede;
+}
+
+.detallesCurso {
+    background-color: #004AAD;
+    color: #dedede;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.imgCurso {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #004AAD;
+}
+
+.nombreCurso, .duracionCurso, .precioCurso {
+    color: black
+}
+
+.flecha {
+    color: white;
+    font-size: 20em;
+}
+
+#izquierda {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    right: 91%;
+}
+
+#izquierda:hover {
+    color: #006aff;
+}
+
+#derecha {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 91%;
+}
+
+#derecha:hover {
+    color: #006aff;
+}
