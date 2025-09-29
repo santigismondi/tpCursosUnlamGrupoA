@@ -1,0 +1,98 @@
+.contenedorMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap:5%;
+}
+.titulo{
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.usuarioRegaloContainer{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 10px;
+    align-items: center;
+}
+
+.labelFormPago{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.metodoDePago{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10%;
+    font-size: 1.5em;
+    color:#ffffff;
+}
+.titulosForm{
+    font-size: 1.5em;
+    color:#ffffff;
+}
+.inputForm,.inputFormEmail{
+    background-color: #181818;
+    border: #006aff solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    width: 40%;
+}
+.inputFormEmail{
+    width: 80%;
+}
+.inputForm:hover{
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+.inputFormEmail:hover{
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+.inputFormPago{
+    height: 2.3em;
+}
+.inputFormCVV{
+    background-color: #181818;
+    border: #006aff solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 15%;
+    color: #ffffff;
+}
+
+.inputFormCVV:hover{
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+} 
+
+@media (max-width: 768px) {
+    a{
+        font-size: 1.4rem;
+    }
+    .inputFormCVV{
+        width: 35%;
+    }
+    .contenedorMain{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    a{
+        font-size: 1rem;
+    }
+
+    .inputForm{
+        width: 150px;
+    }
+
+}
