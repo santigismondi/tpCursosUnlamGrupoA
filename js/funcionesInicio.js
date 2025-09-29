@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const detallesCurso = document.createElement("a");
         detallesCurso.classList.add("detallesCurso");
         detallesCurso.textContent = "Ver Detalles";
+        detallesCurso.setAttribute('href', './detalleCurso.html');
 
         const agregarCurso = document.createElement("button");
         agregarCurso.classList.add("agregarCurso");
