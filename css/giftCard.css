@@ -1,0 +1,284 @@
+main{
+    color: white;
+}
+
+.contenedorMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#nombreGiftCard {
+    width: 90%; 
+    padding: 0.5em; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 0.4em; 
+    font-size: 1em; 
+}
+
+#giftCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h4 {
+    text-align: center;
+    margin-top: 1em; 
+}
+
+
+.cuadrado{
+    width: 25em;
+    height: 25em;
+    border: 1px solid white;
+    background-color: white;
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    color: black;
+}
+
+.cuadrado-monto{
+    width: 3.5em;
+    height: 2.5em;
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.Color{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.fuente{
+    display: flex; 
+    margin-bottom: 2px;
+    font-size: 1.2em;
+}
+
+.monto{
+    font-size: 1.5em;
+}
+
+#monto{
+    width: 40%; 
+    padding: 0.5em; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 0.4em; 
+    font-size: 0.8em;
+}
+
+legend{
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+
+.opcion{
+    display: flex; 
+    margin-bottom: 2px;
+}
+
+.opcion::before {
+    content: ""; 
+    width: 1.3em; 
+    height: 1.3em;
+    border-radius: 50%; 
+    border: 1px solid #333; 
+}
+
+label[for="rojo"]::before {
+    background-color: red;
+}
+
+label[for="azul"]::before {
+    background-color: blue;
+}
+
+label[for="verde"]::before {
+    background-color: green;
+}
+
+label[for="amarillo"]::before {
+    background-color: yellow;
+
+}label[for="rosa"]::before {
+    background-color: pink;
+}
+
+
+fieldset{
+   border:none;
+   padding: 0;
+   margin-bottom: 0.8em;
+}
+
+.tamaño-fuente{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.ubicacion-fieldset{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cuadrado-ubicacion{
+    display: flex; 
+    margin-bottom: 2px;
+    content: ""; 
+    width: 1.3em; 
+    height: 1.3em;
+    border: 1px solid #333; 
+    background-color: white;
+    position: relative; 
+}
+
+label[for="derecha-abajo"]::after {
+    content: "";
+    width: 0.5em; 
+    height: 0.5em;
+    background-color: black;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+}
+
+label[for="derecha-arriba"]::after {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    background-color: black;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+}
+
+label[for="izquierda-arriba"]::after {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    background-color: black;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+}
+
+.fondo{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cuadrado-fondo{
+    display: flex; 
+    margin-bottom: 2px;
+}
+
+.cuadrado-fondo::before {
+    content: ""; 
+    width: 1.3em; 
+    height: 1.3em;
+    border: 1px solid #333; 
+}
+
+label[for="celeste"]::before {
+    background-color: lightblue;
+}
+
+label[for="violeta"]::before {
+    background-color: violet;
+}
+
+label[for="negro"]::before {
+    background-color: black;
+}
+
+label[for="naranja"]::before {
+    background-color: orange;
+
+}label[for="dorado"]::before {
+    background-color: gold;
+}
+
+#personalizacion form a button {
+    width: 90%; 
+    padding: 10px 20px; 
+    margin-top: 1.5em; 
+    font-size: 1.2em; 
+    border-radius: 5px;
+    background-color: rgb(13, 185, 228); 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .contenedorMain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadrado {
+        width: 20em;
+        height: 20em;
+    }
+
+    #personalizacion {
+        max-width: 90%; 
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .cuadrado h1 {
+        font-size: 2em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .cuadrado {
+        width: 15em;
+        height: 15em;
+    }
+
+    .cuadrado h3 {
+        font-size: 0.9em;
+    }
+    .cuadrado h1 {
+        font-size: 1.5em;
+    }
+    
+    .cuadrado-monto {
+        width: 3em;
+        height: 2em;
+        font-size: 1em;
+    }
+
+    .Color, .tamaño-fuente, .ubicacion-fieldset, .fondo {
+        flex-wrap: wrap; 
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    #personalizacion form a button {
+        width: 100%; 
+        font-size: 1em;
+    }
+}

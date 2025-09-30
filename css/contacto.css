@@ -1,143 +1,174 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
-main{
+
+body {
+    position: relative;
+}
+
+main {
     width: 80%;
 }
-.tituloContacto{
+
+.tituloContacto {
     color: white;
     padding-bottom: 1em;
 }
-.contenedorContacto{
+
+.contenedorContacto {
     display: grid;
-    grid-template-columns: 1fr 1fr;  
+    grid-template-columns: 1fr 1fr;
     gap: 2em;
 
 }
-.formularioContacto{
+
+.formularioContacto {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    
-      
+
+
 }
-.formularioContacto input {
-    border: 0.065em solid #f5ecec ;
+
+.formularioContacto input,
+.formularioContacto textarea {
+    border: 0.065em solid #f5ecec;
     border-radius: 0.4em;
     width: 100%;
     height: 3em;
     background-color: #222222;
+    color: white;
 }
-.formularioContacto textarea{
+
+.formularioContacto textarea {
     width: 100%;
     height: 6em;
     border-radius: 0.4em;
     padding-top: 0.4em;
     background-color: #222222;
-    border: 0.065em solid #f5ecec ;
+    border: 0.065em solid #f5ecec;
 }
-.datosContacto{
+
+.datosContacto {
     width: 100%;
     height: 17em;
     border-radius: 0.4em;
-    border: 0.065em solid #b6c4f3 ; 
-    background-color: #222222;  
+    border: 0.065em solid #b6c4f3;
+    background-color: #222222;
     display: grid;
     font-weight: bold;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "titulo titulo"
-                         "info foto"
-                         "info foto";
-    
+        "info foto"
+        "info foto";
+
 }
 
-.contenedorBoton{
+.contenedorBoton {
     display: flex;
     justify-content: center;
     margin: 1em;
 }
-.botonEnviar{
+
+.botonEnviar {
     width: 8em;
     height: 2.5em;
     border-radius: 0.4em;
     border: none;
     background-color: #222222;
-    border: 0.1em solid #eff1f3 ;
+    border: 0.1em solid #eff1f3;
     color: white;
-    font-weight: bold;    
+    font-weight: bold;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     box-shadow: #0c0000 0px 4px 8px 0px;
-       
+
 }
-.botonEnviar:hover{
+
+.botonEnviar:hover {
     background-color: #222222;
     transition-duration: 0.3s;
-    border: 0.1em solid #006aff ;
+    border: 0.1em solid #006aff;
     transform: scale(1.1);
 }
-.formularioContacto  input::placeholder, textarea::placeholder{
+
+input:focus,
+textarea:focus {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1efef;
+}
+
+.formularioContacto input::placeholder,
+textarea::placeholder {
     padding-left: 0.5em;
     color: #dbd4d4;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     margin-top: 0.2em;
-    
+
 }
-.formularioContacto input:hover, textarea:hover{
-    border: 0.2em solid #006aff ;
+
+.formularioContacto input:hover,
+textarea:hover {
+    border: 0.2em solid #006aff;
     transition-duration: 0.3s;
 }
-.contenedorMapa{
+
+.contenedorMapa {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height:auto;
+    height: auto;
     border-radius: 0.4em;
     object-fit: cover;
     margin: 2em 0;
 }
-.mapa{
-    border: 0.065em solid #0c0000 ;
+
+.mapa {
+    border: 0.065em solid #0c0000;
     border-radius: 0.4em;
     width: 100%;
     height: 17em;
 }
-.tituloDos{
+
+.tituloDos {
     color: white;
     padding-bottom: 1em;
     font-size: 2em;
 }
-.subtituloContacto{ 
+
+.subtituloContacto {
     grid-area: titulo;
-    font-size: 1.5em;    
-    display: flex;
-    justify-content: center;
-    align-items: start;
+    font-size: 1.5em;
+    text-align: center;
     color: #faf9f9;
-    border: 0.065em solid #2222 ;
-    border: 0.065em  solid #b6c4f3 ;
+    border: 0.065em solid #2222;
+    border: 0.065em solid #b6c4f3;
 }
-iframe{
+
+iframe {
     grid-area: foto;
     width: 95%;
     height: 13em;
-    border-radius: 0.4em;  
+    border-radius: 0.4em;
     justify-self: center;
     align-self: center;
     box-shadow: #0c0000 0px 4px 8px 0px;
-    border: 0.065em solid #b6c4f3 ;
+    border: 0.065em solid #b6c4f3;
 }
-iframe:hover{
+
+iframe:hover {
     border: 0.1em solid #006aff;
-   
+    transform: scale(1.1);
+
 }
-.listaContacto{
+
+.listaContacto {
     grid-area: info;
     list-style: none;
     display: flex;
@@ -150,69 +181,112 @@ iframe:hover{
     font-size: 1.2em;
     color: rgb(243, 246, 248);
     background-color: #222222;
-    border: 0.065em  solid #b6c4f3 ;
+    border: 0.065em solid #b6c4f3;
 }
-.listaContacto:hover{
-    border: 0.1em solid #006aff ;
+
+.listaContacto:hover {
+    border: 0.1em solid #006aff;
     transition-duration: 0.3s;
 }
 
-svg{
+svg {
     width: 1.2em;
-    height: 1.2em;    
+    height: 1.2em;
 }
-svg:hover{
+
+svg:hover {
     transform: scale(1.2);
 }
-.iconos{
+
+.iconos {
     color: #e1e7e7;
     margin-right: 0.5em;
     cursor: pointer;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5em;    
+    gap: 0.5em;
 }
-.iconos:hover{
+
+.iconos:hover {
     cursor: pointer;
     transition-duration: 0.3s;
     transform: scale(1.1);
 }
-@media (max-width: 768px){
-    .contenedorContacto{
-        grid-template-columns: 1fr;        
+
+.formularioEnviado {
+    width: 100%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;    
+}
+
+.contenedorBoton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.enviandoMail {
+    width: 42%;
+    height: 70%;   
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #f9f9fc;
+    background-color: #b6c4f3;
+    position: absolute;
+    top: 15%;
+    
+}
+.mensaje{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #f1efef;
+}
+.manoDeOk{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+
+
+@media (max-width: 768px) {
+    .contenedorContacto {
+        grid-template-columns: 1fr;
     }
-    .datosContacto{
+
+    .datosContacto {
         height: auto;
         grid-template-areas: "titulo"
-                             "foto"
-                             "info";        
+            "foto"
+            "info";
     }
-    iframe{
+
+    iframe {
         width: 90%;
-        height: 10em;        
+        height: 10em;
     }
-    .listaContacto{
-        font-size: 1em;
-        gap: 1em;
-        padding: 0.5em;
-        margin: 0.5em;
-    }
-    .formularioContacto{
-        gap: 1em;
-    }
-    .formularioContacto input {
-        height: 2.5em;        
-    }
-    .formularioContacto textarea{
-        height: 5em;        
-    }
-    .botonEnviar{
-        width: 7em;
-        height: 2em;
-        font-size: 1em;        
-    }
-    .subtituloContacto{
+
+   
+    .subtituloContacto {
         font-size: 1.2em;
+    }
+    .formularioEnviado {
+        height: 20em;
+    }
+    .enviandoMail{
+        width: 80%;
+        height: 50%;
+        top: 25%;
+    }
+    .mensaje{
+        font-size: 1.5em;
     }
 }
