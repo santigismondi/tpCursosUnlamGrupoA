@@ -1,0 +1,184 @@
+.mes {
+    text-align: center;
+    color: white;
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: white;
+    justify-items: center;
+    row-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.calendarioNombres {
+    margin-bottom: 0.2em;
+    font-size: 1.3em;
+}
+
+.calendarioDias {
+    border: 0.5px solid white;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redireccion {
+    width: 100%;
+    text-decoration: solid;
+}
+
+.redireccion:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.dia {
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid white;
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    margin-top: 1em;
+}
+
+.dia:hover {
+    background-color: #006aff;
+}
+
+.actividad {
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+    background-color: orange;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+.actividad:hover {
+    background-color: #0DA876;
+}
+
+.flecha {
+    color: white;
+    font-size: 30em;
+}
+
+#izquierda {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 91%;
+}
+
+#izquierda:hover {
+    color: #006aff;
+}
+
+#derecha {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 91%;
+}
+
+#derecha:hover {
+    color: #006aff;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .flecha {
+        font-size: 25em;
+    }
+
+    #izquierda {
+        top: 30%;
+    }
+
+    #derecha {
+        top: 30%;
+    }
+
+    .dia {
+        width: 3vh;
+        height: 3vh;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .actividad {
+        font-size: 0.7em;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .flecha {
+        font-size: 20em;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .calendario {
+        grid-template-columns: repeat(7, 0.5fr);
+    }
+
+    .flecha {
+        font-size: 10em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .flecha {
+        font-size: 5em;
+    }
+
+    #izquierda {
+        top: 25%;
+    }
+
+    #derecha {
+        top: 25%;
+    }
+
+    .dia {
+        width: 1.5em;
+        height: 1.5em;
+        margin-top: 0.5em;
+        font-size: 0.7em;
+    }
+
+    .calendarioNombres {
+        display: none;
+    }
+
+    .actividad {
+        font-size: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .calendario {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calendarioDias {
+        width: 15vw;
+        height: 20vw;
+    }
+
+}

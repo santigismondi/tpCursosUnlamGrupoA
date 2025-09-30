@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos Unlam</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/miPerfil.css">
-    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png"> 
+    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="headerInicio">
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -56,14 +56,15 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
-                <li class="headerListItem">
-                    <a class="botonNav" href="./miPerfil.html">
-                        <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
-                        <span class="textoNav">Mi Perfil</span>
+                <li class="headerListItemCerrarSesion">
+                    <a class="botonNavCerrarSesion" href="../index.html">
+                        <span class="iconoNav"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="textoNav">Cerrar Sesion</span>
                     </a>
                 </li>
             </ul>
@@ -75,10 +76,54 @@
                 <span><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></span>
             </form>
         </section>
-    </header> 
+    </header>
+
     <main class="contenedorMain">
-        
+        <h1 class="titulo-perfil">Mi Usuario</h1>
+        <section class="perfil">
+            <section class="perfil-usuario">
+                <img src="../recursos/img/perfilUsuario.img.png" alt="Foto de perfil" class="foto-perfil">
+                <p class="nombre-usuario">usuario1</p>
+            </section>
+
+            <section class="perfil-info">
+                <section class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <span id="nombre" class="texto">Nombre</span>
+                </section>
+                <section class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <span id="apellido" class="texto">Apellido</span>
+                </section>
+                <section class="campo">
+                    <label for="email">E-mail:</label>
+                    <span id="email" class="texto">usuario1@gmail.com</span>
+                </section>
+
+                <section class="campo">
+                    <label for="password">Contraseña:</label>
+                    <span id="password" class="texto">***********</span>
+                </section>
+            </section>
+            <section class="cambiar-contra">
+            <h2 class="subtituloCambiarContra">Cambiar Contraseña</h2>                      
+                <form action="" class="formularioCambiarContra">  
+                    <section class="campo">
+                        <label id="idLabelNewContra" class="labelForm">Nueva Contraseña</label>
+                        <input id="idFormNewContra" type="password" class="inputForm" placeholder="">
+                    </section>
+                    <section class="campo">
+                        <label id="idLabelConfirmContra" class="labelForm">Confirmar Contraseña</label>
+                        <input id="idFormConfirmContra" type="password" class="inputForm" placeholder="">
+                    </section>
+                    <section class="acciones">
+                        <button type="submit" class="btn-guardar">Cambiar Contraseña</button>
+                    </section>
+                </form>
+            </section>
+        </section>
     </main>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -101,4 +146,5 @@
         </ul>
     </footer>
 </body>
+
 </html>

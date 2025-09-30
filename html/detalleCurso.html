@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos Unlam</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/detalleCurso.css">
-    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png"> 
+    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="headerInicio">
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -56,7 +56,8 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
@@ -75,10 +76,106 @@
                 <span><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></span>
             </form>
         </section>
-    </header> 
+    </header>
+
     <main class="contenedorMain">
-        
+
+        <section class="descripcionCurso">
+
+            <article class="imgArt"><img class="portadaCurso" src="../recursos/img/cursos/javascript.avif"
+                    alt="Portada del curso JavaScript Desde Cero">
+            </article>
+
+            <article class="descripcion">
+                <h1>JavaScript Desde Cero</h1>
+                <p class="precio"><strong>Precio:</strong> $75 USD</p>
+                <p class="duracion"><strong>Dedicación:</strong> 8 horas semanales</p>
+                <p class="requisitos"><strong>Requisitos previos:</strong></p>
+                <ul class="requisitos">
+                    <li>Conocimientos sólidos de HTML y CSS</li>
+                </ul>
+                <a href="../html/inscripcionCurso.html" class="btn-inscripcion">Inscribirse</a>
+            </article>
+
+        </section>
+
+        <section class="clasesCurso">
+            <details class="acordeon">
+                <summary class="contenido">Contenidos por clase</summary>
+                <details class="contenido">
+                    <summary class="contenido">Clase 1</summary>
+                    <p>Fundamentos de JavaScript</p>
+                    <p>Duracion: 150 minutos</p>
+                    <details>
+                        <summary class="contenido">Video 1</summary>
+                        <p>Variables, Tipos de Datos y Operadores</p>
+                        <p>Duracion: 35:45</p>
+                    </details>
+                    <details>
+                        <summary class="contenido">Video 2</summary>
+                        <p>Funciones y Objetos</p>
+                        <p>Duracion: 50:20</p>
+                    </details>
+                    <details>
+                        <summary class="contenido">Examenes</summary>
+                        <p>Desafío de Lógica</p>
+                        <p>Duracion: 60 minutos</p>
+                    </details>
+                </details>
+            </details>
+
+        </section>
+
+        <section class="detallesDocente">
+            <img class="imgDocente" src="../recursos/img/cursos/docente-juan.jpg" alt="Foto de Juan Perez">
+            <article class="docente">
+                <h3><strong>Juan Pérez</strong></h3>
+                <div class="valoracion">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span>★</span>
+                </div>
+                <p class="extracto">Desarrollador Full-Stack especializado en el ecosistema de JavaScript.</p>
+            </article>
+        </section>
+
+        <h2>Cursos Relacionados</h2>
+
+        <section class="carrusel">
+
+            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/html.avif"
+                    alt="Portada del curso Desarrollo Web: HTML y CSS desde Cero">
+                <h3 class="nombreCurso">Desarrollo Web: HTML y CSS desde Cero</h3>
+                <span class="duracionCurso">Dedicación: 5 horas semanales</span>
+                <span class="precioCurso">Precio: $50 USD</span>
+                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
+            </section>
+
+            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/nodeJs.avif"
+                    alt="Portada del curso Backend con Node.js y Express">
+                <h3 class="nombreCurso">Backend con Node.js y Express</h3>
+                <span class="duracionCurso">Dedicación: 10 horas semanales</span>
+                <span class="precioCurso">Precio: $90 USD</span>
+                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
+            </section>
+
+            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/django.avif"
+                    alt="Portada del curso Python para Backend con Django">
+                <h3 class="nombreCurso">Python para Backend con Django</h3>
+                <span class="duracionCurso">Dedicación: 10 horas semanales</span>
+                <span class="precioCurso">Precio: $95 USD</span>
+                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
+            </section>
+
+        </section>
+
+        <div class="flecha" id="izquierda">&#x2039;</div>
+        <div class="flecha" id="derecha">&#8250;</div>
+
     </main>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -101,4 +198,5 @@
         </ul>
     </footer>
 </body>
+
 </html>

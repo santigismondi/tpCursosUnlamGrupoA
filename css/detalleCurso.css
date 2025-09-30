@@ -1,0 +1,232 @@
+.portadaCurso {
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid #004AAD;
+}
+
+.imgDocente {
+    width: 15%;
+    height: 75%;
+    border-radius: 50%;
+    border: 3px solid gold;
+    margin-left: 2em;
+}
+
+.contenedorMain {
+    color: white;
+}
+
+.descripcionCurso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.descripcion {
+    margin-left: -10em;
+}
+
+.btn-inscripcion {
+    background-color: #004AAD;
+    color: #dedede;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-inscripcion:hover {
+    background-color: #dedede;
+    color: #004AAD;
+}
+
+.clasesCurso {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.detallesDocente {
+    display: flex;
+    border: 1px solid #0082AD;
+    border-radius: 1em;
+    height: 15em;
+    align-items: center;
+    margin-left: 5em;
+    margin-bottom: 5em;
+    background-color: #1D222E;
+}
+
+.docente {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-bottom: 4em;
+    gap: 1em;
+}
+
+details {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #1D222E;
+    width: 20em;
+    background: #f9f9f9;
+    border-radius: 6px;
+    list-style: none;
+    position: relative;
+}
+
+/* Quita el triángulo default */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Icono personalizado con + y - */
+summary::after {
+    content: "+";
+    position: absolute;
+    right: 16px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+details[open]>summary::after {
+    content: "−";
+    transform: rotate(180deg);
+}
+
+details[open] summary {
+    background: #e8f4ff;
+    color: #2c3e50;
+}
+
+details p {
+    padding: 10px 20px;
+    margin: 0;
+    border-top: 1px solid #eee;
+    color: #555;
+}
+
+/* Sub-acordeones */
+details details {
+    margin: 8px 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+details details summary {
+    background: #fdfdfd;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+details details p {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+.valoracion {
+    margin-top: -1em;
+    font-size: 1.3em;
+}
+
+.estrella {
+    color: gold;
+}
+
+.carrusel {
+    display: flex;
+    gap: 5%;
+    margin: 2rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.curso {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    padding: 15px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 20px;
+    background-color: #dedede;
+}
+
+.detallesCurso {
+    background-color: #004AAD;
+    color: #dedede;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.imgCurso {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #004AAD;
+}
+
+.nombreCurso,
+.duracionCurso,
+.precioCurso {
+    color: black
+}
+
+.flecha {
+    color: white;
+    font-size: 20em;
+}
+
+#izquierda {
+    cursor: pointer;
+    position: absolute;
+    top: 140%;
+    right: 91%;
+}
+
+#izquierda:hover {
+    color: #006aff;
+}
+
+#derecha {
+    cursor: pointer;
+    position: absolute;
+    top: 140%;
+    left: 91%;
+}
+
+#derecha:hover {
+    color: #006aff;
+}
