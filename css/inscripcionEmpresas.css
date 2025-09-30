@@ -1,0 +1,194 @@
+body {
+    padding: 20px;
+}
+
+.inscripcion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitulo {
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.fila-persona {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.fila-persona input {
+    flex-grow: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.btn-eliminar {
+    flex-shrink: 0; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #6c757d; 
+    font-size: 1.8em;
+    padding: 0;
+    line-height: 1;
+}
+
+.btn-eliminar:hover {
+    color: #dc3545; 
+}
+
+.controles-adicionales {
+    margin-top: 15px;
+    padding-left: 5px; 
+}
+
+.btn-agregar {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #6c757d; 
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.controles-pago {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.monto-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 15px;
+    background-color: #eee; 
+    border-radius: 4px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inscribirse {
+    padding: 10px 25px;
+    background-color: #6c757d; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-inscribirse:hover {
+    background-color: #5a6268;
+}
+
+.btn-agregar .fa-plus-circle {
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: #6c757d;
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .inscripcion-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .fila-persona {
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+
+    .fila-persona input {
+
+        width: 100%;
+        flex-basis: 100%; 
+        margin: 0;
+    }
+
+
+    
+    .controles-pago {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .monto-total {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .inscripcion-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .subtitulo {
+        font-size: 0.8em;
+    }
+
+    .fila-persona {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        border: 1px solid #ccc; 
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .fila-persona input {
+        width: 95%; 
+        padding: 8px;
+    }
+
+    .fila-persona {
+        position: relative;
+    }
+    
+    .btn-eliminar {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 1.5em;
+    }
+    
+    .btn-agregar {
+        font-size: 0.9em;
+    }
+    
+    .btn-inscribirse {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px 25px;
+    }
+}

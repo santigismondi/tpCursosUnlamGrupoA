@@ -77,6 +77,42 @@
         </section>
     </header> 
     <main class="contenedorMain">
+        <h1>TÍTULO CURSO</h1>
+        <p class="subtitulo">INSCRIPCIÓN</p>
+
+        <form id="formularioInscripcion">
+            <div id="contenedorPersonas">
+                <div class="fila-persona">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                    <input type="number" placeholder="DNI" min="0" required>
+                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
+                </div>
+                <div class="fila-persona">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                    <input type="number" placeholder="DNI" min="0" required>
+                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
+                </div>
+                <div class="fila-persona">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                    <input type="number" placeholder="DNI" min="0" required>
+                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
+                </div>
+            </div>
+
+            <div class="controles-adicionales">
+                <button type="button" id="btnAgregarPersona" class="btn-agregar">
+                    <i class="fas fa-plus-circle"></i> Agregar Persona
+                </button>
+            </div>
+
+            <div class="controles-pago">
+                <span class="monto-total">$000.-</span>
+                <button type="submit" class="btn-inscribirse">INSCRIBIRSE</button>
+            </div>
+        </form>
         
     </main>
     <footer class="contenedorFooter">
