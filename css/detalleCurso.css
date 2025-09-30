@@ -5,8 +5,8 @@
 }
 
 .imgDocente {
-    width: 15%;
-    height: 75%;
+    width: 15vh;
+    height: 15vh;
     border-radius: 50%;
     border: 3px solid gold;
     margin-left: 2em;
@@ -31,14 +31,14 @@
     background-color: #004AAD;
     color: #dedede;
     border: none;
-    padding: 10px;
+    padding: 0.8em;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0.7em;
 }
 
 .btn-inscripcion:hover {
@@ -74,24 +74,23 @@
 
 details {
     border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    background: white;
+    background: #222222;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
 summary {
-    padding: 12px 16px;
+    padding: 1em;
     cursor: pointer;
     font-weight: bold;
-    color: #1D222E;
+    color: rgb(29, 34, 46);
     width: 20em;
-    background: #f9f9f9;
-    border-radius: 6px;
+    background: #7e868b;
     list-style: none;
+    color: white;
     position: relative;
 }
+
 
 /* Quita el triángulo default */
 summary::-webkit-details-marker {
@@ -113,20 +112,20 @@ details[open]>summary::after {
 }
 
 details[open] summary {
-    background: #e8f4ff;
-    color: #2c3e50;
+    background: #7e868b;
+    color: white;
 }
 
 details p {
     padding: 10px 20px;
     margin: 0;
     border-top: 1px solid #eee;
-    color: #555;
+    color: #dedede;
 }
 
 /* Sub-acordeones */
 details details {
-    margin: 8px 15px;
+    margin: 1em;
     border: 1px solid #eee;
     border-radius: 5px;
 }
@@ -134,12 +133,12 @@ details details {
 details details summary {
     background: #fdfdfd;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1em;
 }
 
 details details p {
-    font-size: 14px;
-    padding: 8px 15px;
+    font-size: 1em;
+    padding: 0.5em;
 }
 
 .valoracion {
@@ -207,13 +206,14 @@ details details p {
 .flecha {
     color: white;
     font-size: 20em;
+    user-select: none;
 }
 
 #izquierda {
     cursor: pointer;
-    position: absolute;
-    top: 140%;
-    right: 91%;
+    margin-right: 110%;
+    margin-top: -1.4em;
+    position: relative;
 }
 
 #izquierda:hover {
@@ -222,9 +222,9 @@ details details p {
 
 #derecha {
     cursor: pointer;
-    position: absolute;
-    top: 140%;
-    left: 91%;
+    margin-left: 110%;
+    margin-top: -1.4em;
+    position: relative;
 }
 
 #derecha:hover {
