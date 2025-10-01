@@ -230,3 +230,102 @@ details details p {
 #derecha:hover {
     color: #006aff;
 }
+
+@media screen and (max-width: 1200px) {
+
+    .carrusel {
+        gap: 2%;
+    }
+
+    .flecha {
+        font-size: 15em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .curso {
+
+        width: 27%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .portadaCurso {
+        width: 90%;
+    }
+
+    .descripcionCurso {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .descripcion {
+        margin-left: 0;
+    }
+
+    .imgArt {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgDocente {
+        margin-left: 0;
+    }
+
+    .btn-inscripcion {
+        width: 100%;
+    }
+
+    .docente {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+        margin-left: 0;
+        padding: 1em;
+        gap: 0.5em;
+    }
+
+    summary {
+        width: 15em;
+    }
+
+    .detallesDocente {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-top: 1em;
+        margin-left: 0;
+        margin-bottom: 3em;
+    }
+
+    .imgDocente {
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .carrusel {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .nombreCurso,
+    .duracionCurso,
+    .precioCurso {
+        font-size: 80%;
+    }
+
+    .curso {
+        width: 80%;
+    }
+
+    .flecha {
+        display: none;
+    }
+
+}
