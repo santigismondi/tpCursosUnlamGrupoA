@@ -121,7 +121,7 @@ h1, h2 {
 }
 
 @media(max-width: 768px){
-    h1, h2{
+    h1{
         font-size: 1.5em;
     }
     .contenedorPrincipal{
@@ -130,6 +130,9 @@ h1, h2 {
     }
     .contenedorFormulario{
         width: 80%;
+    }
+    .subtitulo{
+        font-size: 1em;
     }
     .inputForm{
         font-size: 1.2em;
@@ -141,4 +144,5 @@ h1, h2 {
         font-size: 1em;
         height: 40px;
     }
+    
 }

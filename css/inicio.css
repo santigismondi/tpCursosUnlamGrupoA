@@ -125,4 +125,11 @@
     .curso {
         width: 80%;
     }
+    .medioDePago{
+        align-items: center;        
+    }
+    .medioDePago img{
+        width: 50%;
+        height: 50%;
+    }
 }
