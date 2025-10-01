@@ -86,7 +86,9 @@
 
 .botones {
     display: flex;
-    gap: 10em;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
 }
 
 .btn {
@@ -98,7 +100,6 @@
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
-    display: inline-block;
     margin-top: 1em;
 }
 
@@ -160,6 +161,20 @@
     .contenedorMain {
         display: flex;
         flex-direction: column;
+    }
+
+    .btn {
+        font-size: 70%;
+    }
+
+    .mensaje h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cerrar {
+        display: flex;
+        justify-content: center;
     }
 }
 
