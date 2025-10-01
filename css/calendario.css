@@ -69,6 +69,7 @@
 .flecha {
     color: white;
     font-size: 30em;
+    user-select: none;
 }
 
 #izquierda {

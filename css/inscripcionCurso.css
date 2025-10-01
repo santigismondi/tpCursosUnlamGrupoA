@@ -1,0 +1,190 @@
+.contenedorMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 5%;
+}
+
+.titulo {
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.usuarioRegaloContainer {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 10px;
+    align-items: center;
+}
+
+.labelFormPago {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.metodoDePago {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10%;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.titulosForm {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.inputForm,
+.inputFormEmail {
+    background-color: #181818;
+    border: #006aff solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    width: 40%;
+}
+
+.inputFormEmail {
+    width: 80%;
+}
+
+.inputForm:hover {
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+
+.inputFormEmail:hover {
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+
+.inputFormPago {
+    height: 2.3em;
+}
+
+.inputFormCVV {
+    background-color: #181818;
+    border: #006aff solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 15%;
+    color: #ffffff;
+}
+
+.inputFormCVV:hover {
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.btn {
+    color: white;
+    display: flex;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 1em;
+}
+
+#cancelar {
+    background-color: #a71a1a;
+}
+
+#confirmar {
+    background-color: #09702f;
+}
+
+#confirmar:hover {
+    scale: 1.1;
+}
+
+/* Checkbox oculto */
+#confirm-toggle {
+    display: none;
+}
+
+/* Cartel de confirmación */
+.mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #002457;
+    color: #dedede;
+    border-radius: 1em;
+    padding: 1em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#confirm-toggle:checked+.mensaje {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cerrar {
+    display: block;
+    margin-top: 1em;
+    cursor: pointer;
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    a {
+        font-size: 1.4rem;
+    }
+
+    .inputFormCVV {
+        width: 35%;
+    }
+
+    .contenedorMain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        font-size: 70%;
+    }
+
+    .mensaje h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cerrar {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 1rem;
+    }
+
+    .inputForm {
+        width: 150px;
+    }
+
+}

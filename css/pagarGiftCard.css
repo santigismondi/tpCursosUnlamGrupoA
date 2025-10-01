@@ -1,19 +1,18 @@
 .contenedorMain{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     gap:5%;
+    margin-top: 20px;
 }
-.titulo{
+.tituloRegala{
     color: white;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    font-size: 2em;
 }
 .usuarioRegaloContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 50%;
     gap: 10px;
     align-items: center;
@@ -73,6 +72,23 @@
     transition-duration: 0.3s;
 } 
 
+.btnEnviar{
+    background-color: #006aff;
+    border-radius: 10px;
+    border: #ffffff solid 2px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+.btnEnviar:hover{
+    background-color: #ffffff;    
+    color: #006aff;
+    border: #006aff solid 2px;
+    transition-duration: 0.3s;
+}
 @media (max-width: 768px) {
     a{
         font-size: 1.4rem;

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos Unlam</title>
+    <title>EdUNLaM</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
-    <link rel="stylesheet" href="../css/inscripcionEmpresas.css">
-    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png"> 
+    <link rel="stylesheet" href="../css/inscripcionCurso.css">
+    <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="headerInicio">
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -56,7 +56,8 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
@@ -68,6 +69,7 @@
                 </li>
             </ul>
         </nav>
+
         <section class="elementosHeader">
             <form action="" class="formularioBuscador">
                 <label for="" class="labelBuscar">Buscar</label>
@@ -75,46 +77,38 @@
                 <span><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></span>
             </form>
         </section>
-    </header> 
+
+    </header>
+
     <main class="contenedorMain">
-        <h1>TÍTULO CURSO</h1>
-        <p class="subtitulo">INSCRIPCIÓN</p>
 
-        <form id="formularioInscripcion">
-            <div id="contenedorPersonas">
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
-                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
-                </div>
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
-                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
-                </div>
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
-                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
-                </div>
-            </div>
+        <section class="metodoDePago">
+            <label for="" class="labelFormPago">
+                <input name="pago" type="radio" class="inputFormPago" value="tarjeta">
+                Tarjeta de credito
+                <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
+                <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
+            </label>
+            <!-- <p id="numeroTarjetaCargada"></p> -->
+            <label for="" class="labelFormPago">
+                <input name="pago" type="radio" class="inputFormPago" value="transferencia">
+                Transferencia Bancaria
+                <span class="CBU">CBU: 0000111166665555</span>
+            </label>
+        </section>
 
-            <div class="controles-adicionales">
-                <button type="button" id="btnAgregarPersona" class="btn-agregar">
-                    <i class="fas fa-plus-circle"></i> Agregar Persona
-                </button>
+        <section class="botones">
+            <a href="../html/inicio.html" class="btn" id="cancelar">Cancelar</a>
+            <label for="confirm-toggle" class="btn" id="confirmar">Confirmar inscripción</label>
+            <input type="checkbox" id="confirm-toggle">
+            <div class="mensaje">
+                <h2>✅ Inscripto correctamente</h2>
+                <a href="../html/detalleCurso.html" class="cerrar">Cerrar</a>
             </div>
+        </section>
 
-            <div class="controles-pago">
-                <span class="monto-total">$000.-</span>
-                <button type="submit" class="btn-inscribirse">INSCRIBIRSE</button>
-            </div>
-        </form>
-        
     </main>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -136,5 +130,10 @@
             <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i> - LinkedIn</a></li>
         </ul>
     </footer>
+
 </body>
+<script src="../json-data/cursos.js"></script>
+<script src="../js/funcionesHeader.js"></script>
+<script src="../js/funcionesInicio.js"></script>
+
 </html>
