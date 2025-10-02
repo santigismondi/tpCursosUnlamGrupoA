@@ -22,7 +22,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "formulario datos"
-                           "boton boton";
+        "boton boton";
     gap: 2em;
 
 }
@@ -32,7 +32,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-
+    width: 90%;
 
 }
 
@@ -78,7 +78,7 @@ main {
     margin: 1em;
 }
 
-.botonEnviar {    
+.botonEnviar {
     width: 8em;
     height: 2.5em;
     border-radius: 0.4em;
@@ -180,14 +180,21 @@ iframe:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 1.5em;
-    padding: 1em;
-    margin: 0.5em;
+    gap: 1em;    
+    margin: 1.1em;
     box-shadow: #0c0000 0px 4px 8px 0px;
     font-size: 1.2em;
     color: rgb(243, 246, 248);
     background-color: #222222;
     border: 0.065em solid #b6c4f3;
+}
+.datosContacto__video{
+    border: 0.065em solid #b6c4f3;
+    border-radius: 0.4em;
+    width: 85%;
+    height: 13em;
+    justify-self: center;
+    box-shadow: #0c0000 0px 4px 8px 0px;
 }
 
 .listaContacto:hover {
@@ -212,6 +219,7 @@ svg:hover {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    padding: 0.2em;
 }
 
 .iconos:hover {
@@ -224,28 +232,43 @@ svg:hover {
 
 
 .enviandoMail {
-    width: 25%;
-    height: 30%;   
+    width: 35%;
+    height: 30%;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f9f9fc;
-    background-color: #b6c4f3;
     position: absolute;
     top: 40%;
-    left: 40%;
-    
+    left: 30%;
+
 }
-.mensaje{
+
+.mensaje {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.5em;
     color: #f1efef;
 }
-.manoDeOk{
+
+.manoDeOk {
     font-size: 3em;
     margin-bottom: 0.5em;
+}
+
+.enviandoMail__volver {
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    padding: 0.5em;
+    border: 2px solid #f9f9fc;
+    border-radius: 5px;
+    background-color: #74bae9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 
@@ -254,15 +277,17 @@ svg:hover {
     .contenedorContacto {
         grid-template-columns: 1fr;
         grid-template-areas: "formulario"
-                             "boton"
-                             "datos";
+                               "boton"
+                               "datos";
     }
 
     .datosContacto {
+        width: 90%;
         height: auto;
-        grid-template-areas: "titulo"
-                             "foto"
-                             "info";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     iframe {
@@ -270,24 +295,29 @@ svg:hover {
         height: 10em;
     }
 
-   
-    .subtituloContacto {
-        font-size: 1.2em;
-    }
+
     .enviandoMail {
         width: 60%;
-        height: 20%;   
+        height: 20%;
         border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border: 2px solid #f9f9fc;
-        background-color: #b6c4f3;
         position: absolute;
         top: 40%;
         left: 20%;
-        
+
     }
-   
+    .subtituloContacto {
+        font-size: 1.2em;
+        width: 90%;
+        margin-bottom: 0.5em;
+    } 
+
+    svg {
+        width: auto;
+        height: 1.9em;
+    }
+    .contenedorMapa{
+        width: 20em;
+        height: auto;   
+        padding: 0.5em;;
+    }
 }
