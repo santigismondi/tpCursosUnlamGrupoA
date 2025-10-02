@@ -1,6 +1,7 @@
 DATOS_CURSOS=[
   {
     "id": 1,
+    "categoria": "FrontEnd",
     "imagenUrl": "../recursos/img/cursos/html.avif",
     "titulo": "Desarrollo Web: HTML y CSS desde Cero",
     "precio": {
@@ -57,6 +58,7 @@ DATOS_CURSOS=[
   },
   {
     "id": 2,
+    "categoria": "BackEnd",
     "imagenUrl": "../recursos/img/cursos/javascript.avif",
     "titulo": "JavaScript Desde Cero",
     "precio": {
@@ -100,6 +102,7 @@ DATOS_CURSOS=[
   },
   {
     "id": 3,
+    "categoria": "BackEnd",
     "imagenUrl": "../recursos/img/cursos/nodeJs.avif",
     "titulo": "Backend con Node.js y Express",
     "precio": {
@@ -140,6 +143,7 @@ DATOS_CURSOS=[
   },
   {
     "id": 4,
+    "categoria": "BackEnd",
     "imagenUrl": "../recursos/img/cursos/django.avif",
     "titulo": "Python para Backend con Django",
     "precio": {
@@ -174,6 +178,7 @@ DATOS_CURSOS=[
   },
   {
     "id": 5,
+    "categoria": "Base de Datos",
     "imagenUrl": "../recursos/img/cursos/sql.avif",
     "titulo": "Bases de Datos con SQL desde Cero",
     "precio": {
@@ -212,6 +217,7 @@ DATOS_CURSOS=[
   },
   {
     "id": 6,
+    "categoria": "Base de Datos",
     "imagenUrl": "../recursos/img/cursos/mongodb.avif",
     "titulo": "Bases de Datos NoSQL con MongoDB",
     "precio": {

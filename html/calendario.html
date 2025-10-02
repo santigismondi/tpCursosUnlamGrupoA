@@ -16,55 +16,56 @@
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
-                    <div>EdUNLaM</div>
+                    <img class="logoUnlam" 
+                    src="../recursos/img/logoUnlamAzul.png"
+                    alt="Logo de Unlam">
+                    <span>EdUNLaM</span>
                 </a>
             </section>
-
+     
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
-                        <div class="iconoNav"><i class="fa-solid fa-house"></i></div>
-                        <div class="textoNav">Inicio</div>
+                        <span class="iconoNav"><i class="fa-solid fa-house"></i></span>
+                        <span class="textoNav">Inicio</span>
                     </a>
                 </li>
                 <li class="headerListItem">
                     <a class="botonNav" href="./inscripcionEmpresas.html">
-                        <div class="iconoNav"><i class="fa-solid fa-briefcase"></i></div>
-                        <div class="textoNav">Empresas</div>
+                        <span class="iconoNav"><i class="fa-solid fa-briefcase"></i></span>
+                        <span class="textoNav">Empresas</span>
                     </a>
                 </li>
                 <li class="headerListItem">
                     <a class="botonNav" href="./giftCard.html">
-                        <div class="iconoNav"><i class="fa-solid fa-gift"></i></div>
-                        <div class="textoNav">Gift Card</div>
+                        <span class="iconoNav"><i class="fa-solid fa-gift"></i></span>
+                        <span class="textoNav">Gift Card</span>
                     </a>
                 </li>
                 <li class="headerListItem">
                     <a class="botonNav" href="./calendario.html">
-                        <div class="iconoNav"><i class="fa-solid fa-calendar"></i></div>
-                        <div class="textoNav">Calendario</div>
+                        <span class="iconoNav"><i class="fa-solid fa-calendar"></i></span>
+                        <span class="textoNav">Calendario</span>
                     </a>
                 </li>
                 <li class="headerListItem">
                     <a class="botonNav" href="./contacto.html">
-                        <div class="iconoNav"><i class="fa-solid fa-envelope-open"></i></div>
-                        <div class="textoNav">Contactanos</div>
+                        <span class="iconoNav"><i class="fa-solid fa-envelope-open"></i></span>
+                        <span class="textoNav">Contactanos</span>
                     </a>
                 </li>
             </ul>
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <div class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
-                            1</div>
-                        <!-- <div class="textoNav">Carrito</div> -->
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
                 <li class="headerListItem">
                     <a class="botonNav" href="./miPerfil.html">
-                        <div class="iconoNav"><i class="fa-solid fa-circle-user"></i></div>
-                        <div class="textoNav">Mi Perfil</div>
+                        <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
+                        <span class="textoNav">Mi Perfil</span>
                     </a>
                 </li>
             </ul>
@@ -72,11 +73,17 @@
         <section class="elementosHeader">
             <form action="" class="formularioBuscador">
                 <label for="" class="labelBuscar">Buscar</label>
-                <input type="text" class="inputBuscar" placeholder="" id="buscador">
+                <input list="buscador-dataList" class="inputBuscar" placeholder="" id="buscador">
+                <datalist class="inputBuscar" id="buscador-dataList">
+                    <option value=""></option>
+                    <option value="FrontEnd"></option>
+                    <option value="BackEnd"></option>
+                    <option value="Base de Datos"></option>
+                </datalist>
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
-    </header>
+    </header> 
 
     <main class="contenedorMain">
 
