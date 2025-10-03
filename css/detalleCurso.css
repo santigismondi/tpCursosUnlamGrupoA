@@ -1,5 +1,5 @@
 .portadaCurso {
-    width: 70%;
+    width: 60vh;
     border-radius: 10px;
     border: 2px solid #004AAD;
 }
@@ -24,7 +24,7 @@
 }
 
 .descripcion {
-    margin-left: -10em;
+    margin-left: 2em;
 }
 
 .btn-inscripcion {
@@ -233,6 +233,10 @@ details details p {
 
 @media screen and (max-width: 1200px) {
 
+    .portadaCurso {
+    width: 50vh;
+}
+
     .carrusel {
         gap: 2%;
     }
@@ -248,6 +252,10 @@ details details p {
 
         width: 27%;
     }
+
+    .portadaCurso {
+    width: 40vh;
+}
 }
 
 @media screen and (max-width: 768px) {

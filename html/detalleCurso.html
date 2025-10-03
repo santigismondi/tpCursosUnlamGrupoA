@@ -55,10 +55,9 @@
             </ul>
             <ul class="headerList">
                 <li class="headerListItem">
-                    <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
-                            1</span>
-                        <!-- <span class="textoNav">Carrito</span> -->
+                    <a class="botonNavCarrito" href="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="iconoNavCarrito" id="logoCarrito">1</span>
                     </a>
                 </li>
                 <li class="headerListItem">
@@ -72,7 +71,13 @@
         <section class="elementosHeader">
             <form action="" class="formularioBuscador">
                 <label for="" class="labelBuscar">Buscar</label>
-                <input type="text" class="inputBuscar" placeholder="" id="buscador">
+                <input list="buscador-dataList" class="inputBuscar" placeholder="" id="buscador">
+                <datalist class="inputBuscar" id="buscador-dataList">
+                    <option value=""></option>
+                    <option value="FrontEnd"></option>
+                    <option value="BackEnd"></option>
+                    <option value="Base de Datos"></option>
+                </datalist>
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
@@ -86,8 +91,11 @@
                     alt="Portada del curso JavaScript Desde Cero">
             </article>
 
-            <article class="descripcion">
+            <aside class="descripcion">
                 <h1>JavaScript Desde Cero</h1>
+                <p class="desc">Domina el lenguaje que impulsa la web. Aprende desde las bases hasta conceptos
+                    avanzados como asincronía, manipulación del DOM y APIs del navegador.
+                </p>
                 <p class="precio"><strong>Precio:</strong> $75 USD</p>
                 <p class="duracion"><strong>Dedicación:</strong> 8 horas semanales</p>
                 <p class="requisitos"><strong>Requisitos previos:</strong></p>
@@ -95,7 +103,7 @@
                     <li>Conocimientos sólidos de HTML y CSS</li>
                 </ul>
                 <a href="../html/inscripcionCurso.html" class="btn-inscripcion">Inscribirse</a>
-            </article>
+            </aside>
 
         </section>
 
@@ -122,7 +130,7 @@
                         <p>Duracion: 60 minutos</p>
                     </details>
                 </details>
-                
+
                 <details class="contenido">
                     <summary class="contenido">Clase 2</summary>
                     <p>Continuamos con JavaScript</p>
