@@ -26,7 +26,16 @@ main {
     gap: 2em;
 
 }
-
+.contenedorContactoCorrecto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 1em;
+    color: #ffffff;
+    margin-top: 20px;
+}
 .formularioContacto {
     grid-area: formulario;
     display: flex;
@@ -88,10 +97,8 @@ main {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     box-shadow: #0c0000 0px 4px 8px 0px;
-
 }
 
 .botonEnviar:hover {
@@ -103,7 +110,6 @@ main {
 
 input:focus,
 textarea:focus {
-    font-family: Arial, Helvetica, sans-serif;
     color: #f1efef;
 }
 
@@ -111,7 +117,6 @@ textarea:focus {
 textarea::placeholder {
     padding-left: 0.5em;
     color: #dbd4d4;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     margin-top: 0.2em;
 
@@ -227,23 +232,29 @@ svg:hover {
     transition-duration: 0.3s;
     transform: scale(1.1);
 }
-
-
-
-
-.enviandoMail {
-    width: 35%;
-    height: 30%;
-    border-radius: 5px;
-    position: absolute;
-    top: 40%;
-    left: 30%;
-
+.btnVolver {
+    width: 10em;
+    height: 3em;
+    border-radius: 0.4em;
+    border: none;
+    background-color: #222222;
+    border: 0.1em solid #eff1f3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: #0c0000 0px 4px 8px 0px;
+    padding: 0.2em;
 }
 
+.btnVolver:hover {
+    background-color: #222222;
+    transition-duration: 0.3s;
+    border: 0.1em solid #006aff;
+    transform: scale(1.1);
+}
 .mensaje {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: #f1efef;
 }
 
@@ -251,27 +262,6 @@ svg:hover {
     font-size: 3em;
     margin-bottom: 0.5em;
 }
-
-.enviandoMail__volver {
-    width: 100%;
-    height: 100%;
-    margin-top: 1em;
-    padding: 0.5em;
-    border: 2px solid #f9f9fc;
-    border-radius: 5px;
-    background-color: #74bae9;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-
 
 @media (max-width: 768px) {
     .contenedorContacto {
