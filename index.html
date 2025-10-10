@@ -41,22 +41,18 @@
                 <form class="formulario" id="formLogin" action="./html/inicio.html">
                     <label for="usuario" class="titulosForm">Usuario:</label>
                     <input type="text" id="usuario" name="usuario" class="inputForm" required>
+                    
                     <label for="contrasena" class="titulosForm">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" class="inputForm" required>
-                    <a class="linkBotonIndex">
-                        <button type="submit" id="btnIniciarSesion" class="botonFormLogin">
-                            Iniciar Sesión
-                        </button>
-                    </a>
+                    
+                    <button type="submit" id="btnIniciarSesion" class="botonFormLogin">Iniciar Sesión</button>
+                    
                     <a class="linkBotonIndex" href="./html/registrarse.html">
-                        <button type="button" id="btnRegistrarse" class="botonFormRegistrarse">
-                            Registrarse
-                        </button>
+                        <button type="button" id="btnRegistrarse" class="botonFormRegistrarse">Registrarse</button>
                     </a>
                 </form>
-                    <p id="mensajeError"></p>
-                    <a class="linkRecuperarClave" href="./html/recuperarClave.html">¿Olvidaste tu contraseña?</a>
-
+                <p id="mensajeError"></p>
+                <a class="linkRecuperarClave" href="./html/recuperarClave.html">¿Olvidaste tu contraseña?</a>
             </section>
         </section>
     </main>
@@ -76,4 +72,5 @@
         </ul>
     </footer>
 </body>
+<script src="./js/index.js"></script>
 </html>
