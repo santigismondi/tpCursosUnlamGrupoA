@@ -115,9 +115,7 @@ h1, h2 {
 
 .linkRecuperarClave:hover{
     color: #006aff;
-    font-size: 1.3em;
     transition: 0.3s;
-
 }
 #mensajeError{
     color: red;
