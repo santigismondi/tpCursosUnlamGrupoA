@@ -115,11 +115,13 @@ h1, h2 {
 
 .linkRecuperarClave:hover{
     color: #006aff;
-    font-size: 1.3em;
     transition: 0.3s;
-
 }
-
+#mensajeError{
+    color: red;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
 @media(max-width: 768px){
     h1{
         font-size: 1.5em;
@@ -144,5 +146,7 @@ h1, h2 {
         font-size: 1em;
         height: 40px;
     }
-    
+    #mensajeError{
+        font-size: 0.8em;
+    }
 }

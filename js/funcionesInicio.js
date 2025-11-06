@@ -1,5 +1,6 @@
 const datosCursos = DATOS_CURSOS;
 const containerCursos = document.getElementById("cursosContainerInicio");
+const botonAgregar = document.getElementsByClassName("agregarCurso");
 
 document.addEventListener("DOMContentLoaded", () => {
     containerCursos.innerHTML = "";
@@ -7,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     datosCursos.forEach(curso => {
         const contenedorCurso = document.createElement("section");
         contenedorCurso.classList.add("curso");
+
+        contenedorCurso.dataset.id = curso.id;
 
         const imgCurso = document.createElement("img");
         imgCurso.classList.add("imgCurso");
