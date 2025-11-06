@@ -54,6 +54,9 @@ main {
     background-color: #222222;
     color: white;
 }
+.contenedoDeMensaje{
+    position: relative;
+}
 
 .formularioContacto textarea {
     width: 100%;
@@ -62,6 +65,12 @@ main {
     padding-top: 0.4em;
     background-color: #222222;
     border: 0.065em solid #f5ecec;
+    
+}
+.textarea-caracteres{
+    position: absolute;
+    right:  2%;
+    color: white;
 }
 
 .datosContacto {
@@ -92,13 +101,14 @@ main {
     height: 2.5em;
     border-radius: 0.4em;
     border: none;
-    background-color: #222222;
+    background-color: #706666;
     border: 0.1em solid #eff1f3;
     color: white;
     font-weight: bold;
     cursor: pointer;
     font-size: 1.2em;
     box-shadow: #0c0000 0px 4px 8px 0px;
+    opacity: 50%;
 }
 
 .botonEnviar:hover {
@@ -258,9 +268,14 @@ svg:hover {
     color: #f1efef;
 }
 
-.manoDeOk {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+.js-estilo-alerta{
+   background: #ff0000;
+   color: #f9f7f7;
+   border-radius: 5% 5%;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {

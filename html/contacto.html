@@ -16,13 +16,11 @@
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -83,33 +81,32 @@
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
-    </header> 
+    </header>
     <main>
         <h1 class="tituloContacto">Contacto</h1>
         <section class="contenedorContacto">
-            <form class="formularioContacto" id="formularioContacto" action="./contactoFormularioEnviado.html"
-                method="get">
+            <form class="formularioContacto" id="formularioContacto" action="" method="get">
 
-                <input type="text" id="nombre" name="nombre" class="inputContacto" placeholder="Ingrese su nombre"
-                    required>
-
-
-                <input type="email" id="email" name="email" class="inputContacto" placeholder="Ingrese su E-mail "
-                    required>
-
-
-                <input type="tel" id="tel" name="tel" class="inputContacto" placeholder="Ingrese su N° de telefono"
-                    required>
-
-
-                <textarea id="mensaje" name="mensaje" class="textareaContacto" placeholder="Escriba su consulta"
-                    required></textarea>
+                <div class="contenedoDeNombre">
+                    <input type="text" id="nombre" name="nombre" class="inputNombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="contenedoDeMail">
+                    <input type="email" id="email" name="email" class="inputEmail" placeholder="Ingrese su E-mail ">
+                </div>
+                <div class="contenedoDeTelefono">
+                    <input type="tel" id="tel" name="tel" class="inputTelefono" placeholder="Ingrese su N° de telefono">
+                </div>
+                <div class="contenedoDeMensaje">
+                    <textarea id="mensaje" name="mensaje" class="inputTextarea" maxlength="200"
+                        placeholder="Escriba su consulta"></textarea>
+                        <span class="textarea-caracteres">200</span>
+                </div>
             </form>
             <section class="datosContacto">
                 <h2 class="subtituloContacto">Informacion de contacto</h2>
 
-                <iframe class="datosContacto__video" src="https://www.youtube.com/embed/9_j-acIEIgo?si=kgI6-GfR3iSwYeFx" title="YouTube video player"
-                    frameborder="0"
+                <iframe class="datosContacto__video" src="https://www.youtube.com/embed/9_j-acIEIgo?si=kgI6-GfR3iSwYeFx"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <ul class="listaContacto">
@@ -126,7 +123,8 @@
                                     d="M95.252 132.961c20.824 0 37.705-16.881 37.705-37.706S116.076 57.55 95.252 57.55 57.547 74.431 57.547 95.255s16.881 37.706 37.705 37.706z" />
                                 <path fill="#e33b2e"
                                     d="M95.252 47.628h82.479A95.237 95.237 0 0 0 142.87 12.76 95.23 95.23 0 0 0 95.245 0a95.222 95.222 0 0 0-47.623 12.767 95.23 95.23 0 0 0-34.856 34.872l41.24 71.43.011.006a47.62 47.62 0 0 1-.015-47.633 47.61 47.61 0 0 1 41.252-23.815z" />
-                            </svg><h3>www.unlam.edu.ar</h3> 
+                            </svg>
+                            <h3>www.unlam.edu.ar</h3>
                         </a></li>
                     <li><a class="iconos" href="https://workspace.google.com/intl/es-419_ar/gmail/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 49.4 512 399.42">
@@ -144,7 +142,8 @@
                                     <path fill="#c5221f" fill-rule="nonzero"
                                         d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z" />
                                 </g>
-                            </svg> <h3>EdUnlam@unlam.edu.ar</h3>
+                            </svg>
+                            <h3>EdUnlam@unlam.edu.ar</h3>
                         </a></li>
                     <li><a class="iconos" href="https://www.whatsapp.com/?lang=es_LA/" target="_blank">
                             <svg viewBox="0 0 256 259" xmlns="http://www.w3.org/2000/svg"
@@ -155,17 +154,18 @@
                                 <path
                                     d="M219.033 37.668C195.316 13.254 162.531 0 129.048 0 57.898 0 .698 57.897 1.395 128.35c0 22.322 6.278 43.947 16.742 63.478L0 258.096l67.663-17.439c18.834 10.464 39.76 15.347 60.688 15.347 70.453 0 127.653-57.898 127.653-128.35 0-34.181-13.254-66.269-36.97-89.986ZM129.048 234.38c-18.834 0-37.668-4.882-53.712-14.648l-4.185-2.093-40.458 10.463 10.463-39.76-2.79-4.186C7.673 134.63 22.322 69.058 72.546 38.365c50.224-30.692 115.097-16.043 145.79 34.181 30.692 50.224 16.043 115.097-34.18 145.79-16.045 10.463-35.576 16.043-55.108 16.043Zm61.385-77.428-7.673-3.488s-11.16-4.883-18.136-8.371c-.698 0-1.395-.698-2.093-.698-2.093 0-3.488.698-4.883 1.396 0 0-.697.697-10.463 11.858-.698 1.395-2.093 2.093-3.488 2.093h-.698c-.697 0-2.092-.698-2.79-1.395l-3.488-1.395c-7.673-3.488-14.648-7.674-20.229-13.254-1.395-1.395-3.488-2.79-4.883-4.185-4.883-4.883-9.766-10.464-13.253-16.742l-.698-1.395c-.697-.698-.697-1.395-1.395-2.79 0-1.395 0-2.79.698-3.488 0 0 2.79-3.488 4.882-5.58 1.396-1.396 2.093-3.488 3.488-4.883 1.395-2.093 2.093-4.883 1.395-6.976-.697-3.488-9.068-22.322-11.16-26.507-1.396-2.093-2.79-2.79-4.883-3.488H83.01c-1.396 0-2.79.698-4.186.698l-.698.697c-1.395.698-2.79 2.093-4.185 2.79-1.395 1.396-2.093 2.79-3.488 4.186-4.883 6.278-7.673 13.951-7.673 21.624 0 5.58 1.395 11.161 3.488 16.044l.698 2.093c6.278 13.253 14.648 25.112 25.81 35.575l2.79 2.79c2.092 2.093 4.185 3.488 5.58 5.58 14.649 12.557 31.39 21.625 50.224 26.508 2.093.697 4.883.697 6.976 1.395h6.975c3.488 0 7.673-1.395 10.464-2.79 2.092-1.395 3.487-1.395 4.882-2.79l1.396-1.396c1.395-1.395 2.79-2.092 4.185-3.487 1.395-1.395 2.79-2.79 3.488-4.186 1.395-2.79 2.092-6.278 2.79-9.765v-4.883s-.698-.698-2.093-1.395Z"
                                     fill="#FFF" />
-                            </svg> <h3>+54 9 11 1234 5678</h3> 
+                            </svg>
+                            <h3>+54 9 11 1234 5678</h3>
 
                         </a></li>
 
                 </ul>
             </section>
 
-            <section class="contenedorBoton" >
-                <a href="./contactoFormularioEnviado.html">
+            <section class="contenedorBoton">
+                <a href="#">
                     <button type="submit" form="formularioContacto" class="botonEnviar">Enviar</button>
-                    
+
                 </a>
             </section>
         </section>
@@ -201,6 +201,7 @@
             <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i> - LinkedIn</a></li>
         </ul>
     </footer>
+    <script type="module" src="../js/js-contacto.js/contactoScrip.js"></script>
 </body>
 
 </html>
