@@ -94,12 +94,13 @@
                     <input type="email" id="email" name="email" class="inputEmail" placeholder="Ingrese su E-mail ">
                 </div>
                 <div class="contenedoDeTelefono">
-                    <input type="tel" id="tel" name="tel" class="inputTelefono" placeholder="Ingrese su N° de telefono">
+                    <input type="tel" id="tel" name="tel" class="inputTelefono"
+                        placeholder="Ingrese su N° de telefono de 10 digitos">
                 </div>
                 <div class="contenedoDeMensaje">
                     <textarea id="mensaje" name="mensaje" class="inputTextarea" maxlength="200"
                         placeholder="Escriba su consulta"></textarea>
-                        <span class="textarea-caracteres">200</span>
+                    <span class="textarea-caracteres"></span>
                 </div>
             </form>
             <section class="datosContacto">
@@ -164,10 +165,12 @@
 
             <section class="contenedorBoton">
                 <a href="#">
-                    <button type="submit" form="formularioContacto" class="botonEnviar">Enviar</button>
+                    <button type="submit" form="formularioContacto" class="botonEnviar"
+                        >Enviar</button>
 
                 </a>
             </section>
+
         </section>
 
 
@@ -180,6 +183,11 @@
 
         </section>
     </main>
+    <dialog class="modal js-modal">
+       Formulario enviado
+       <button>Cerrar</button>
+
+    </dialog>
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>

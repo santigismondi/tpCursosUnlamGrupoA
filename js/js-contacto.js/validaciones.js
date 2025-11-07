@@ -9,7 +9,7 @@ export class validaciones {
         return resultado
     }
     validarTelefono(telefono) {
-        const val = /^\+?\d{7,}$/;
+        const val = /^\+?\d{10,}$/;
         const resultado = val.test(telefono);
         return resultado
 
