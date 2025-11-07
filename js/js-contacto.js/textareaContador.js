@@ -8,7 +8,7 @@ export class contador{
     const texto=e.target.value.length;    
     const cantidad=MAX_CARACTER;
     let disponible=cantidad-texto
-        TEXTAREA_CARACTERES.innerHTML=disponible
+      return  TEXTAREA_CARACTERES.innerHTML=disponible
 
    
 }

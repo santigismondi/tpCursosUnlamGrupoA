@@ -98,7 +98,7 @@
                         placeholder="Ingrese su N° de telefono de 10 digitos">
                 </div>
                 <div class="contenedoDeMensaje">
-                    <textarea id="mensaje" name="mensaje" class="inputTextarea" maxlength="200"
+                    <textarea id="mensaje" name="mensaje" class="inputTextarea" maxlength="40"
                         placeholder="Escriba su consulta"></textarea>
                     <span class="textarea-caracteres"></span>
                 </div>
@@ -164,12 +164,18 @@
             </section>
 
             <section class="contenedorBoton">
-                <a href="#">
-                    <button type="submit" form="formularioContacto" class="botonEnviar"
-                        >Enviar</button>
-
-                </a>
+                <button type="submit" form="formularioContacto" class="botonEnviar">Enviar</button>
             </section>
+            <dialog class="modal js-modal">
+                <div>
+                    formulario
+                </div>
+                <div>
+                    <button class="cerrrarDialog">Cerrar</button>
+                </div>
+
+
+            </dialog>
 
         </section>
 
@@ -183,11 +189,7 @@
 
         </section>
     </main>
-    <dialog class="modal js-modal">
-       Formulario enviado
-       <button>Cerrar</button>
 
-    </dialog>
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
