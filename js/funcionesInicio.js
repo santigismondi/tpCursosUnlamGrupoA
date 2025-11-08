@@ -45,4 +45,47 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedorCurso.appendChild(detallesCurso);
         contenedorCurso.appendChild(agregarCurso);
     });
+
+    //Slider
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.imagenSlider');
+    const nextBtn = document.getElementById('next-slide');
+    const prevBtn = document.getElementById('prev-slide');
+    let autoSlideTimer;
+    let slideActual = 0;
+    const totalSlides = slides.length;
+    
+    function actualizarSlider() {
+        sliderWrapper.style.transform = `translateX(-${slideActual * 100}%)`;
+    }
+
+    function resetAutoSlideTimer() {
+        clearInterval(autoSlideTimer);
+        
+        autoSlideTimer = setInterval(() => {
+            nextBtn.click();
+        }, 5000);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        if (slideActual < totalSlides - 1) {
+            slideActual++;
+        } else {
+            slideActual = 0;
+        }
+        actualizarSlider();
+        resetAutoSlideTimer();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (slideActual > 0) {
+            slideActual--;
+        } else {
+            slideActual = totalSlides - 1;
+        }
+        actualizarSlider();
+        resetAutoSlideTimer();
+    });
+
+    resetAutoSlideTimer();
 })
