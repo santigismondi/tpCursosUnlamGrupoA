@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnRegistrar = document.getElementById('btnRegistrar');
 
     function esSoloLetras(texto) {
-        const letrasValidas = "abcdefghijklmnopqrstuvwxyzáéíóúñ ";
+        const letrasValidas = "abcdefghijklmnopqrstuvwxyzáéíóúñ";
         texto = texto.toLowerCase();
         for (let i = 0; i < texto.length; i++) {
             if (!letrasValidas.includes(texto[i])) {
@@ -129,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             nombre: nombreInput.value.trim(),
             apellido: apellidoInput.value.trim(),
             email: emailInput.value.trim(),
-            carrito: []
+            carrito: [],
+            cursosInscripto: []
         };
         const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
