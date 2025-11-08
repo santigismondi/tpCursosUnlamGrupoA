@@ -110,7 +110,39 @@ main {
     box-shadow: #0c0000 0px 4px 8px 0px;
     
 }
-
+.js-modal{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;    
+    color:#1d45e8;;
+    border:0.05em solid rgb(249, 250, 253);
+    background-color: #262b32;
+    box-shadow: #e1e7e7 5px;
+    width: 24vw;
+    height: 20vh;
+    top: 50%;
+    left: 35%;
+   
+    border-radius: 5px;
+    
+}
+.contenedorDialog{
+    padding: 0.4em;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+.cerrarDialog{
+    font-size: 0.6em;
+    background-color: #006aff;
+    border:2px solid white;
+    color: white;
+    padding: 0.6em;
+    border-radius: 5px;
+    
+}
 
 .botonEnviar:hover {
     background-color: #222222;
@@ -326,4 +358,33 @@ svg:hover {
         height: auto;   
         padding: 0.5em;;
     }
+    .js-modal{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;    
+    color:#1d45e8;;
+    border:0.05em solid rgb(249, 250, 253);
+    background-color: #262b32;
+    box-shadow: #e1e7e7 5px;
+    width: 50%;
+    height: 25vh;
+    top: 50%;
+    left: 20%;
+    padding: 2em;
+    border-radius: 5px;
+    
+}
+.contenedorDialog{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.cerrarDialog{
+    background-color: #006aff;
+    border:2px solid white;
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+}
 }

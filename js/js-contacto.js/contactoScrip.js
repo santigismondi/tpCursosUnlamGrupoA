@@ -83,7 +83,7 @@ function comprobarFormulario() {
         return
     }
     BTN.disabled = false;
-    console.log(FORMULARIO)
+    
 }
 const dialogo = new Dialogo();
  dialogo.render();

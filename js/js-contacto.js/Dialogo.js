@@ -4,17 +4,14 @@ export class Dialogo{
     render(){
         const Btndialogo=document.querySelector('.botonEnviar');
         const modal=document.querySelector('.modal');
-        const close=document.querySelector('.modal .cerrarDialog');
-        console.log(Btndialogo,modal,close)
-        Btndialogo.addEventListener('click', (e)=>{
-            alert('lalala')
-          modal.showModal();
-            
+        const close=document.querySelector(' .cerrarDialog');
+        
+        Btndialogo.addEventListener('click', (e)=>{            
+         modal.showModal();            
         })
-        close.addEventListener('click', (e)=>{
-            
-          modal.closeModal();
-            
+
+        close.addEventListener('click', (e)=>{            
+          modal.close();            
         })
     }
 }
