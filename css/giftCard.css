@@ -45,7 +45,7 @@ h4 {
 }
 
 .cuadrado-monto{
-    width: 3.5em;
+    width: 6em;
     height: 2.5em;
     position: absolute;
     background-color: black;
@@ -56,6 +56,22 @@ h4 {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+/* Derecha-Abajo */
+.cuadrado-monto.derecha-abajo {
+    right: 0;
+    bottom: 0; /* Lo movemos al fondo */
+    top: auto; /* Desactivamos el top */
+    left: auto;
+}
+
+/* Izquierda-Arriba */
+.cuadrado-monto.izquierda-arriba {
+    left: 0; /* Lo movemos a la izquierda */
+    top: 0;
+    right: auto; /* Desactivamos el right */
+    bottom: auto;
 }
 
 .Color{
@@ -196,6 +212,46 @@ label[for="izquierda-arriba"]::after {
     width: 1.3em; 
     height: 1.3em;
     border: 1px solid #333; 
+}
+
+/* --- Nuevas Clases de Fondo para .cuadrado --- */
+
+.cuadrado.celeste {
+    background-color: lightblue;
+}
+
+.cuadrado.violeta {
+    background-color: violet;
+}
+
+.cuadrado.negro {
+    background-color: black;
+    /* Al cambiar a fondo negro, las letras deben ser blancas para ser visibles */
+    color: white; 
+}
+
+.cuadrado.naranja {
+    background-color: orange;
+}
+
+.cuadrado.dorado {
+    background-color: gold;
+}
+
+/* IMPORTANTE: Ajustar el color del texto del .cuadrado-monto cuando el fondo es negro */
+.cuadrado.negro .cuadrado-monto {
+    background-color: white; /* Invierte el color del monto de fondo para contraste */
+    color: black;           /* Invierte el color del texto del monto */
+}
+
+.cuadrado h1 {
+    color: black; 
+    font-size: 22px; 
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 label[for="celeste"]::before {
