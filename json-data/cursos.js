@@ -11,7 +11,7 @@ DATOS_CURSOS=[
     "dedicacion": "5 horas semanales",
     "docente": {
       "nombre": "Alicia Rodriguez",
-      "fotoUrl": "./recursos/img/cursos/docente-alicia.jpg",
+      "fotoUrl": "../recursos/img/cursos/docente-alicia.jpg",
       "extracto": "Ingeniera en Sistemas con más de 10 años de experiencia en desarrollo front-end.",
       "valoracion": 5
     },
@@ -68,7 +68,7 @@ DATOS_CURSOS=[
     "dedicacion": "8 horas semanales",
     "docente": {
       "nombre": "Juan Pérez",
-      "fotoUrl": "./recursos/img/cursos/docente-juan.jpg",
+      "fotoUrl": "../recursos/img/cursos/docente-juan.jpg",
       "extracto": "Desarrollador Full-Stack especializado en el ecosistema de JavaScript.",
       "valoracion": 4
     },
@@ -112,7 +112,7 @@ DATOS_CURSOS=[
     "dedicacion": "10 horas semanales",
     "docente": {
       "nombre": "Carlos Vega",
-      "fotoUrl": "./recursos/img/cursos/docente-carlos.jpg",
+      "fotoUrl": "../recursos/img/cursos/docente-carlos.jpg",
       "extracto": "Arquitecto de Software experto en la creación de APIs RESTful de alto rendimiento.",
       "valoracion": 5
     },
@@ -153,8 +153,8 @@ DATOS_CURSOS=[
     "dedicacion": "10 horas semanales",
     "docente": {
       "nombre": "Juanjo Ruiz",
-      "fotoUrl": "./recursos/img/cursos/docente-juanjo.jpg",
-      "extracto": "Desarrolladora Python con experiencia en aplicaciones web a gran escala.",
+      "fotoUrl": "../recursos/img/cursos/docente-juanjo.jpg",
+      "extracto": "Desarrollador Python con experiencia en aplicaciones web a gran escala.",
       "valoracion": 5
     },
     "descripcion": "Aprende a desarrollar aplicaciones web completas de forma rápida y segura con Django, el framework de Python que incluye 'baterías incluidas'.",
@@ -188,7 +188,7 @@ DATOS_CURSOS=[
     "dedicacion": "6 horas semanales",
     "docente": {
       "nombre": "Carlos Vega",
-      "fotoUrl": "./recursos/img/cursos/docente-carlos.jpg",
+      "fotoUrl": "../recursos/img/cursos/docente-carlos.jpg",
       "extracto": "Arquitecto de Software experto en la creación de APIs RESTful de alto rendimiento.",
       "valoracion": 5
     },
@@ -227,7 +227,7 @@ DATOS_CURSOS=[
     "dedicacion": "6 horas semanales",
     "docente": {
       "nombre": "Sofía Rossi",
-      "fotoUrl": "./recursos/img/cursos/docente-sofia.jpg",
+      "fotoUrl": "../recursos/img/cursos/docente-sofia.jpg",
       "extracto": "Desarrolladora Python con experiencia en aplicaciones web a gran escala.",
       "valoracion": 5
     },

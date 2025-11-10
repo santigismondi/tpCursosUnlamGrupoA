@@ -57,7 +57,8 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
@@ -88,86 +89,30 @@
 
         <section class="descripcionCurso">
 
-            <article class="imgArt"><img class="portadaCurso" src="../recursos/img/cursos/javascript.avif"
-                    alt="Portada del curso JavaScript Desde Cero">
+            <article class="imgArt"><img id="imagenUrl" class="portadaCurso" src="" alt="">
             </article>
 
             <aside class="descripcion">
-                <h1>JavaScript Desde Cero</h1>
-                <p class="desc">Domina el lenguaje que impulsa la web. Aprende desde las bases hasta conceptos
-                    avanzados como asincronía, manipulación del DOM y APIs del navegador.
-                </p>
-                <p class="precio"><strong>Precio:</strong> $75 USD</p>
-                <p class="duracion"><strong>Dedicación:</strong> 8 horas semanales</p>
+                <h1 id="titulo"></h1>
+                <p class="desc" id="descripcion"></p>
+                <p class="precio"><strong>Precio:</strong> <span id="precio"></span></p>
+                <p class="duracion"><strong>Dedicación:</strong> <span id="dedicacion"></span></p>
                 <p class="requisitos"><strong>Requisitos previos:</strong></p>
-                <ul class="requisitos">
-                    <li>Conocimientos sólidos de HTML y CSS</li>
-                </ul>
+                <ul class="requisitos" id="requisitos"></ul>
                 <a href="../html/inscripcionCurso.html" class="btn-inscripcion">Inscribirse</a>
             </aside>
 
         </section>
 
-        <section class="clasesCurso">
-            <details class="acordeon">
-                <summary class="contenido">Contenidos por clase</summary>
-                <details class="contenido">
-                    <summary class="contenido">Clase 1</summary>
-                    <p>Fundamentos de JavaScript</p>
-                    <p>Duracion: 150 minutos</p>
-                    <details>
-                        <summary class="contenido">Video 1</summary>
-                        <p>Variables, Tipos de Datos y Operadores</p>
-                        <p>Duracion: 35:45</p>
-                    </details>
-                    <details>
-                        <summary class="contenido">Video 2</summary>
-                        <p>Funciones y Objetos</p>
-                        <p>Duracion: 50:20</p>
-                    </details>
-                    <details>
-                        <summary class="contenido">Examenes</summary>
-                        <p>Desafío de Lógica</p>
-                        <p>Duracion: 60 minutos</p>
-                    </details>
-                </details>
-
-                <details class="contenido">
-                    <summary class="contenido">Clase 2</summary>
-                    <p>Continuamos con JavaScript</p>
-                    <p>Duracion: 110 minutos</p>
-                    <details>
-                        <summary class="contenido">Video 1</summary>
-                        <p>Variables, Tipos de Datos y Operadores</p>
-                        <p>Duracion: 35:45</p>
-                    </details>
-                    <details>
-                        <summary class="contenido">Video 2</summary>
-                        <p>Funciones y Objetos</p>
-                        <p>Duracion: 50:20</p>
-                    </details>
-                    <details>
-                        <summary class="contenido">Examenes</summary>
-                        <p>Desafío de Lógica</p>
-                        <p>Duracion: 60 minutos</p>
-                    </details>
-                </details>
-            </details>
-
-        </section>
+        <section id="clasesCurso" class="clasesCurso"></section>
 
         <section class="detallesDocente">
-            <img class="imgDocente" src="../recursos/img/cursos/docente-juan.jpg" alt="Foto de Juan Perez">
+            <img id="fotoUrl" class="imgDocente" src="" alt="">
             <article class="docente">
-                <h3><strong>Juan Pérez</strong></h3>
-                <div class="valoracion">
-                    <span class="estrella">★</span>
-                    <span class="estrella">★</span>
-                    <span class="estrella">★</span>
-                    <span class="estrella">★</span>
-                    <span>★</span>
+                <h3 id="nombre"></h3>
+                <div class="valoracion" id="valoracion">
                 </div>
-                <p class="extracto">Desarrollador Full-Stack especializado en el ecosistema de JavaScript.</p>
+                <p class="extracto" id="extracto"></p>
             </article>
         </section>
 
@@ -204,7 +149,27 @@
 
         </section>
 
+        <div class="similares">
+            <h3>Similares</h3>
+            <div class="carrusel-contenedor">
+                <button class="flecha izquierda" id="btnIzquierda">&#10094;</button>
+                <div class="carrusel" id="carruselSimilares"></div>
+                <button class="flecha derecha" id="btnDerecha">&#10095;</button>
+            </div>
+        </div>
+
+        <section class="carrusel">
+            <button id="btnIzquierda" class="flecha">&#x2039;</button>
+
+            <div id="carruselSimilares" class="contenedor-carrusel">
+                <!-- Aquí se insertan los cursos -->
+            </div>
+
+            <button id="btnDerecha" class="flecha">&#8250;</button>
+        </section>
+
     </main>
+
     <aside id="carritoPanel">
         <button id="botonCerrarCarrito"><i class="fa-solid fa-circle-xmark"></i></button>
         <h1 class="tituloCarrito">Carrito de compras</h1>
@@ -214,6 +179,7 @@
             <button class="botonFinalizarCompra">Finalizar compra</button>
         </section>
     </aside>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -235,7 +201,11 @@
             <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i> - LinkedIn</a></li>
         </ul>
     </footer>
+
 </body>
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
+<script src="../js/js-detallesCurso.js/detallesCurso.js"></script>
+<script src="../js/carrusel.js"></script>
+
 </html>
