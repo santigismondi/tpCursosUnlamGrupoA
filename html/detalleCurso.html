@@ -120,52 +120,11 @@
 
         <section class="carrusel">
 
-            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/html.avif"
-                    alt="Portada del curso Desarrollo Web: HTML y CSS desde Cero">
-                <h3 class="nombreCurso">Desarrollo Web: HTML y CSS desde Cero</h3>
-                <span class="duracionCurso">Dedicación: 5 horas semanales</span>
-                <span class="precioCurso">Precio: $50 USD</span>
-                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
-            </section>
-
-            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/nodeJs.avif"
-                    alt="Portada del curso Backend con Node.js y Express">
-                <h3 class="nombreCurso">Backend con Node.js y Express</h3>
-                <span class="duracionCurso">Dedicación: 10 horas semanales</span>
-                <span class="precioCurso">Precio: $90 USD</span>
-                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
-            </section>
-
-            <section class="curso"><img class="imgCurso" src="../recursos/img/cursos/django.avif"
-                    alt="Portada del curso Python para Backend con Django">
-                <h3 class="nombreCurso">Python para Backend con Django</h3>
-                <span class="duracionCurso">Dedicación: 10 horas semanales</span>
-                <span class="precioCurso">Precio: $95 USD</span>
-                <a href="../html/detalleCurso.html" class="detallesCurso">Ver Detalles</a>
-            </section>
+            <div id="contenedor-cursos" class="contenedor-cursos"></div>
 
             <div class="flecha" id="izquierda">&#x2039;</div>
             <div class="flecha" id="derecha">&#8250;</div>
 
-        </section>
-
-        <div class="similares">
-            <h3>Similares</h3>
-            <div class="carrusel-contenedor">
-                <button class="flecha izquierda" id="btnIzquierda">&#10094;</button>
-                <div class="carrusel" id="carruselSimilares"></div>
-                <button class="flecha derecha" id="btnDerecha">&#10095;</button>
-            </div>
-        </div>
-
-        <section class="carrusel">
-            <button id="btnIzquierda" class="flecha">&#x2039;</button>
-
-            <div id="carruselSimilares" class="contenedor-carrusel">
-                <!-- Aquí se insertan los cursos -->
-            </div>
-
-            <button id="btnDerecha" class="flecha">&#8250;</button>
         </section>
 
     </main>
@@ -206,6 +165,6 @@
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
 <script src="../js/js-detallesCurso.js/detallesCurso.js"></script>
-<script src="../js/carrusel.js"></script>
+<script src="../js/js-detallesCurso.js/carrusel.js"></script>
 
 </html>
