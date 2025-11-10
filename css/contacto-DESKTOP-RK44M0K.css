@@ -117,12 +117,11 @@ main {
     border:0.05em solid rgb(249, 250, 253);
     background-color: #262b32;
     box-shadow: #e1e7e7 5px;
-    min-width: 20vw;
-    min-height: 20vh;
+    width: 24vw;
+    height: 20vh;
     top: 50%;
     left: 35%;
-   padding: auto;
-
+   
     border-radius: 5px;
     
 }
@@ -303,9 +302,9 @@ svg:hover {
 }
 
 .js-estilo-alerta{
-   background: #ff0000;
+   background: #f64545;
    color: #f9f7f7;
-   border-radius: 5% 5%;
+   
    display: flex;
     flex-direction: column;
     justify-content: center;
@@ -366,8 +365,8 @@ svg:hover {
     border:0.05em solid rgb(249, 250, 253);
     background-color: #262b32;
     box-shadow: #e1e7e7 5px;
-    min-width: 20vw;
-    min-height: 20vh;
+    width: 50%;
+    height: 25vh;
     top: 50%;
     left: 20%;
     padding: 2em;
