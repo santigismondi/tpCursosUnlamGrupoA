@@ -2,6 +2,7 @@ const containerCursosHead = document.getElementById("cursosContainerInicio");
 let usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
 const contenedorDeCursosCarrito = document.getElementById("cursosEnCarrito");
 const contenedorValorTotal = document.getElementById("totalCompra");
+
 //FUNCIONALIDAD CARRITO
 document.addEventListener('DOMContentLoaded', function() {
     let cantidadElementos = usuarioActivo.carrito.length;
