@@ -1,49 +1,65 @@
-const containerCursosHead = document.getElementById("cursosContainerInicio");
-let usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
-const contenedorDeCursosCarrito = document.getElementById("cursosEnCarrito");
-const contenedorValorTotal = document.getElementById("totalCompra");
-
-//FUNCIONALIDAD CARRITO
 document.addEventListener('DOMContentLoaded', function() {
-    let cantidadElementos = usuarioActivo.carrito.length;
-    actualizarContador(cantidadElementos);
+    
+    let usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+    //Carrito
     const botonAbrir = document.getElementById('botonAbrirCarrito');
     const botonCerrar = document.getElementById('botonCerrarCarrito');
     const panelCarrito = document.getElementById('carritoPanel');
+    const contenedorDeCursosCarrito = document.getElementById('cursosEnCarrito');
+    const contenedorValorTotal = document.getElementById('totalCompra');
+    const containerCursosHead = document.getElementById("cursosContainerInicio");
+    //Buscador
+    const formBuscador = document.querySelector('.formularioBuscador');
+    const inputBuscador = document.getElementById('buscador');
+    const iconoBuscar = document.getElementById('iconoBuscar');
 
-    botonAbrir.addEventListener('click', function(event) {
-        event.preventDefault();        
-        panelCarrito.classList.add('visible');
-    });
+    //Carrito
+    if (usuarioActivo) {
+        actualizarContador(usuarioActivo.carrito.length);
+    }
 
-    botonCerrar.addEventListener('click', function() {
-        panelCarrito.classList.remove('visible');
-    });
-
-    containerCursosHead.addEventListener('click', function(event) {
-        if (event.target.classList.contains('agregarCurso')) {
-            const tarjeta = event.target.closest('.curso');            
-            const idDelCurso = tarjeta.dataset.id;            
-            const idNumerico = parseInt(idDelCurso);
-            const cursoSeleccionado = datosCursos.find(curso => curso.id === idNumerico);
-
-            if (cursoSeleccionado) {
-                agregarAlCarrito(cursoSeleccionado);
-            }
-            
+    if (botonAbrir && panelCarrito) {
+        botonAbrir.addEventListener('click', function(event) {
+            event.preventDefault();
             mostrarCursosEnCarrito();
-        }
-    });
+            panelCarrito.classList.add('visible');
+        });
+    }
 
-    function agregarAlCarrito(curso) {    
+    if (botonCerrar && panelCarrito) {
+        botonCerrar.addEventListener('click', function() {
+            panelCarrito.classList.remove('visible');
+        });
+    }
+    
+    if(contenedorDeCursosCarrito && contenedorValorTotal){
+        mostrarCursosEnCarrito();
+    }
+
+
+    if (containerCursosHead) {
         
+        containerCursosHead.addEventListener('click', function(event) {
+            if (event.target.classList.contains('agregarCurso')) {
+                const tarjeta = event.target.closest('.curso');
+                const idDelCurso = tarjeta.dataset.id;
+                const idNumerico = parseInt(idDelCurso);
+                const cursoSeleccionado = datosCursos.find(curso => curso.id === idNumerico);
+                if (cursoSeleccionado) {
+                    agregarAlCarrito(cursoSeleccionado);
+                }
+            }
+        });
+    }
+
+    function agregarAlCarrito(curso) {
         if (!usuarioActivo) {
             alert("Debes iniciar sesión para agregar cursos a tu carrito.");
             return;
         }
 
         const itemEnCarrito = {
-            id: curso.id, 
+            id: curso.id,
             titulo: curso.titulo,
             precio: curso.precio,
             imagenUrl: curso.imagenUrl,
@@ -54,13 +70,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!yaExiste) {
             usuarioActivo.carrito.push(itemEnCarrito);
+            
             sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivo));
-            localStorage.setItem('usuarios', JSON.stringify(usuarioActivo));
-        } else {    
+            
+            actualizarUsuarioEnLocalStorage(usuarioActivo);
+
+        } else {
             alert("El curso ya está en tu carrito.");
         }
-        cantidadElementos = usuarioActivo.carrito.length;
-        actualizarContador(cantidadElementos);
+        actualizarContador(usuarioActivo.carrito.length);
     }
 
     function actualizarContador(cantidad) {
@@ -71,54 +89,80 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarCursosEnCarrito() {
+        const usuarioActivoActualizado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+
+        if (!contenedorDeCursosCarrito || !contenedorValorTotal) {
+            console.error("No se encontraron los contenedores del carrito en esta página.");
+            return;
+        }
+
+        if (!usuarioActivoActualizado || usuarioActivoActualizado.carrito.length === 0) {
+            contenedorDeCursosCarrito.innerHTML = `<h3 class="mensajeCarrito">Tu carrito está vacío.</h3>`;
+            contenedorValorTotal.textContent = "0.00";
+            return;
+        }
+
         contenedorDeCursosCarrito.innerHTML = '';
-        usuarioActivo.carrito.forEach(curso => {
+        let valorTotal = 0; 
+
+        usuarioActivoActualizado.carrito.forEach(curso => {
             const cursoElemento = document.createElement('section');
             cursoElemento.classList.add('cursoEnCarrito');
-            const imagenElemento = document.createElement('img');
-            imagenElemento.classList.add('imagenCursoCarrito');
-            imagenElemento.src = curso.imagenUrl;
-            imagenElemento.alt = curso.titulo;
-            const contenedorDetalles = document.createElement('section');
-            contenedorDetalles.classList.add('contenedorDetalles');
-            const tituloElemento = document.createElement('h4');
-            tituloElemento.textContent = curso.titulo;
-            const precioElemento = document.createElement('p');
-            precioElemento.textContent = `Precio: $${curso.precio.valor}`;
-            const dedicacionElemento = document.createElement('p');
-            dedicacionElemento.textContent = `Dedicación: ${curso.dedicacion}`;
-            const eliminarDelCarritoBtn = document.createElement('button');
-            eliminarDelCarritoBtn.classList.add('eliminarDelCarrito');
-            eliminarDelCarritoBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-            eliminarDelCarritoBtn.addEventListener('click', function() {
-                usuarioActivo.carrito = usuarioActivo.carrito.filter(item => item.id !== curso.id);
-                sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivo));
-                localStorage.setItem('usuarios', JSON.stringify(usuarioActivo));
-                mostrarCursosEnCarrito();
-                cantidadElementos = usuarioActivo.carrito.length;
-                actualizarContador(cantidadElementos);
-            });            
-            cursoElemento.appendChild(imagenElemento);
-            contenedorDetalles.appendChild(tituloElemento);
-            contenedorDetalles.appendChild(precioElemento);
-            contenedorDetalles.appendChild(dedicacionElemento);
-            cursoElemento.appendChild(contenedorDetalles);            
-            cursoElemento.appendChild(eliminarDelCarritoBtn);
-
+            
+            cursoElemento.innerHTML = `
+                <img class="imagenCursoCarrito" src="${curso.imagenUrl}" alt="${curso.titulo}">
+                <section class="contenedorDetalles">
+                    <h4>${curso.titulo}</h4>
+                    <p>Precio: $${curso.precio.valor}</p>
+                    <p>Dedicación: ${curso.dedicacion}</p>
+                </section>
+                <button class="eliminarDelCarrito" data-id="${curso.id}"><i class="fa-solid fa-trash"></i></button>
+            `;
+            
             contenedorDeCursosCarrito.appendChild(cursoElemento);
 
-            let valorTotal = 0;
-            usuarioActivo.carrito.forEach(curso => {
-                valorTotal += curso.precio.valor;
-            });
-            if (usuarioActivo.carrito.length === 0) {
-                valorTotal = 0;
-            }else {
-                valorTotal = valorTotal;
+            valorTotal += curso.precio.valor;
+        });
+
+        contenedorValorTotal.textContent = valorTotal.toFixed(2);
+    }
+    
+    function actualizarUsuarioEnLocalStorage(usuarioActualizado) {
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        const index = usuarios.findIndex(user => user.nombreUsuario === usuarioActualizado.nombreUsuario);
+        
+        if (index !== -1) {
+            usuarios[index] = usuarioActualizado;
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        }
+    }
+    
+    if (contenedorDeCursosCarrito) {
+        contenedorDeCursosCarrito.addEventListener('click', function(event) {
+            const botonEliminar = event.target.closest('.eliminarDelCarrito');
+            
+            if (botonEliminar) {
+                const idParaEliminar = parseInt(botonEliminar.dataset.id);
+                
+                usuarioActivo.carrito = usuarioActivo.carrito.filter(item => item.id !== idParaEliminar);
+                
+                sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivo));
+                
+                actualizarUsuarioEnLocalStorage(usuarioActivo);
+                
+                mostrarCursosEnCarrito();
+                
+                actualizarContador(usuarioActivo.carrito.length);
             }
-            contenedorValorTotal.textContent = valorTotal;
         });
     }
-
-    mostrarCursosEnCarrito();
+    //Buscador
+    function realizarBusqueda(event) {
+        event.preventDefault();
+        const terminoBusqueda = inputBuscador.value.trim();
+        sessionStorage.setItem('terminoBusqueda', terminoBusqueda);
+        window.location.href = './resultadosBusqueda.html';
+    }
+    formBuscador.addEventListener('submit', realizarBusqueda);
+    iconoBuscar.addEventListener('click', realizarBusqueda);
 });

@@ -5,3 +5,65 @@
     color: #dedede;
     font-weight: bold;
 }
+.noResultados{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #dedede;
+    margin-top: 2rem;
+}
+.contenedorResultados{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+.curso{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    padding: 15px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 20px;
+    background-color: #dedede;
+}
+.imgCurso{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #004AAD;
+}
+
+.detallesCurso{
+    background-color: #004AAD;
+    color: #dedede;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.agregarCurso{
+    background-color: #004AAD;
+    color: #dedede;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-family: inherit;
+}
