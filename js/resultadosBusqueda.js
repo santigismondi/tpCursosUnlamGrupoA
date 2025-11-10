@@ -25,7 +25,7 @@ function renderizarResultados(cursos) {
     cursos.forEach(curso => {
         const tarjetaCurso = document.createElement('section');
         tarjetaCurso.classList.add('curso');
-        tarjetaCurso.dataset.id = curso.id; // Importante para el carrito
+        tarjetaCurso.dataset.id = curso.id;
 
         tarjetaCurso.innerHTML = `
             <img class="imgCurso" src="${curso.imagenUrl}" alt="Portada de ${curso.titulo}">
