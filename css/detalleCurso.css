@@ -160,8 +160,20 @@ details details p {
     align-items: stretch;
 }
 
+.contenedor-cursos {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.contenedor-cursos::-webkit-scrollbar {
+  display: none;
+}
+
 .curso {
     display: flex;
+    flex: 0 0 calc((100% - 3rem) / 3);
     flex-direction: column;
     border: 1px solid #dedede;
     border-radius: 10px;
