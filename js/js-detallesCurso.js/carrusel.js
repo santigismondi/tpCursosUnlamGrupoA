@@ -1,44 +1,53 @@
-// Carrusel de cursos similares
 document.addEventListener("DOMContentLoaded", () => {
+  // Obtener los cursos desde localStorage o variable global
+  const cursos = JSON.parse(localStorage.getItem("cursos")) || DATOS_CURSOS;
+
+  // Obtener el id del curso actual (si estás en detalle)
   const params = new URLSearchParams(window.location.search);
-  const idCursoActual = parseInt(params.get("id"));
+  const idActual = parseInt(params.get("id"));
 
-  const cursoSeleccionado = cursos.find(c => c.id === idCursoActual);
-  const contenedorCarrusel = document.getElementById("carruselSimilares");
+  // Elementos del carrusel
+  const contenedor = document.getElementById("contenedor-cursos");
+  const flechaIzq = document.getElementById("izquierda");
+  const flechaDer = document.getElementById("derecha");
 
-  if (!cursoSeleccionado || !contenedorCarrusel) {
-    console.warn("No se encontró el curso actual o el contenedor del carrusel.");
-    return;
-  }
+  // Si no hay cursos, salir
+  if (!cursos || cursos.length === 0) return;
 
-  // Seleccionar hasta 5 cursos distintos al actual
-  const cursosSimilares = cursos.filter(c => c.id !== idCursoActual);
-  const mezcladas = cursosSimilares.sort(() => Math.random() - 0.5).slice(0, 5);
+  // Filtrar para no incluir el curso actual
+  let cursosFiltrados = cursos.filter(curso => curso.id !== idActual);
 
-  mezcladas.forEach(curso => {
-    const link = document.createElement("a");
-    link.href = `detalleCurso.html?id=${curso.id}`;
-    link.classList.add("itemCarrusel");
+  // Mezclar aleatoriamente
+  cursosFiltrados = cursosFiltrados.sort(() => Math.random() - 0.5);
 
-    const imagen = document.createElement("img");
-    imagen.src = curso.imagenUrl;
-    imagen.alt = curso.titulo;
+  // Mostrar al menos 4 cursos
+    const cursosMostrar = cursosFiltrados.slice(0, 4);
 
-    link.appendChild(imagen);
-    contenedorCarrusel.appendChild(link);
+  // Limpiar contenedor
+  contenedor.innerHTML = "";
+
+  // Crear elementos del carrusel
+  cursosMostrar.forEach(curso => {
+    const cursoElem = document.createElement("section");
+    cursoElem.classList.add("curso");
+    cursoElem.innerHTML = `
+      <img class="imgCurso" src="${curso.imagenUrl}" alt="${curso.titulo}">
+      <h3 class="nombreCurso">${curso.titulo}</h3>
+      <span class="duracionCurso">Dedicación: ${curso.dedicacion}</span>
+      <span class="precioCurso">Precio: ${curso.precio.valor} ${curso.precio.moneda}</span>
+      <a href="../html/detalleCurso.html?id=${curso.id}" class="detallesCurso">Ver Detalles</a>
+    `;
+    contenedor.appendChild(cursoElem);
   });
 
-  // Flechas de navegación
-  const btnIzquierda = document.getElementById("btnIzquierda");
-  const btnDerecha = document.getElementById("btnDerecha");
+  // Configurar desplazamiento: 1 curso por clic
+  const cursoAncho = contenedor.querySelector(".curso").offsetWidth + 24; // ancho + gap
 
-  if (btnIzquierda && btnDerecha) {
-    btnIzquierda.addEventListener("click", () => {
-      contenedorCarrusel.scrollBy({ left: -300, behavior: "smooth" });
-    });
+  flechaDer.addEventListener("click", () => {
+    contenedor.scrollBy({ left: cursoAncho * 2, behavior: "smooth" });
+  });
 
-    btnDerecha.addEventListener("click", () => {
-      contenedorCarrusel.scrollBy({ left: 300, behavior: "smooth" });
-    });
-  }
+  flechaIzq.addEventListener("click", () => {
+    contenedor.scrollBy({ left: -cursoAncho, behavior: "smooth" });
+  });
 });
