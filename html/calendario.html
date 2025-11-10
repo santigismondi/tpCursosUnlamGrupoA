@@ -17,13 +17,11 @@
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -59,7 +57,8 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="">
-                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i> 1</span>
+                        <span class="iconoNavCarrito" id="logoCarrito"><i class="fa-solid fa-cart-shopping"></i>
+                            1</span>
                         <!-- <span class="textoNav">Carrito</span> -->
                     </a>
                 </li>
@@ -84,7 +83,7 @@
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
-    </header> 
+    </header>
 
     <main class="contenedorMain">
 
@@ -94,13 +93,13 @@
 
             <div class="calendarioNombres">Lunes</div>
             <div class="calendarioNombres">Martes</div>
-            <div class="calendarioNombres">Miercoles</div>
+            <div class="calendarioNombres">Miércoles</div>
             <div class="calendarioNombres">Jueves</div>
             <div class="calendarioNombres">Viernes</div>
-            <div class="calendarioNombres">Sabado</div>
+            <div class="calendarioNombres">Sábado</div>
             <div class="calendarioNombres">Domingo</div>
 
-
+            <!-- Días -->
             <div class="calendarioDias">
                 <div class="dia">1</div>
             </div>
@@ -122,27 +121,38 @@
             <div class="calendarioDias">
                 <div class="dia">7</div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">8</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">HTML y CSS</div>
-                </a>
+                <div class="actividad" data-curso="HTML y CSS"
+                    data-resumen="Aprende la estructura y estilos de páginas web con HTML y CSS"
+                    data-detalle="../html/detalleCurso.html?id=1">
+                    HTML y CSS
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">9</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">JavaScript Desde Cero</div>
-                </a>
+                <div class="actividad" data-curso="JavaScript Desde Cero"
+                    data-resumen="Domina la programación web con JavaScript paso a paso"
+                    data-detalle="../html/detalleCurso.html?id=2">
+                    JavaScript Desde Cero
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">10</div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">11</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">Backend con Node.js y Express</div>
-                </a>
+                <div class="actividad" data-curso="Backend con Node.js y Express"
+                    data-resumen="Crea servidores y APIs con Node.js y Express"
+                    data-detalle="../html/detalleCurso.html?id=3">
+                    Backend con Node.js y Express
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">12</div>
             </div>
@@ -155,12 +165,16 @@
             <div class="calendarioDias">
                 <div class="dia">15</div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">16</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">Python para Backend con Django</div>
-                </a>
+                <div class="actividad" data-curso="Python para Backend con Django"
+                    data-resumen="Aprende a desarrollar aplicaciones web con Python y Django"
+                    data-detalle="../html/detalleCurso.html?id=4">
+                    Python para Backend con Django
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">17</div>
             </div>
@@ -176,24 +190,32 @@
             <div class="calendarioDias">
                 <div class="dia">21</div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">22</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">Bases de Datos con SQL desde Cero</div>
-                </a>
+                <div class="actividad" data-curso="Bases de Datos con SQL desde Cero"
+                    data-resumen="Aprende SQL y gestión de bases de datos relacionales"
+                    data-detalle="../html/detalleCurso.html?id=5">
+                    Bases de Datos con SQL desde Cero
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">23</div>
             </div>
             <div class="calendarioDias">
                 <div class="dia">24</div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">25</div>
-                <a href="../html/detalleCurso.html" class="redireccion">
-                    <div class="actividad">Bases de Datos NoSQL con MongoDB</div>
-                </a>
+                <div class="actividad" data-curso="Bases de Datos NoSQL con MongoDB"
+                    data-resumen="Aprende bases de datos NoSQL y MongoDB desde cero"
+                    data-detalle="../html/detalleCurso.html?id=6">
+                    Bases de Datos NoSQL con MongoDB
+                </div>
             </div>
+
             <div class="calendarioDias">
                 <div class="dia">26</div>
             </div>
@@ -216,6 +238,17 @@
         <div class="flecha" id="derecha">&#8250;</div>
 
     </main>
+
+    <!-- POPUP -->
+    <div id="popupCurso" class="popup" style="display:none;">
+        <div class="popupContenido">
+            <span class="cerrar">&times;</span>
+            <h2 id="nombreCurso"></h2>
+            <p id="resumenCurso"></p>
+            <a id="btnDetalle" href="#" class="btn">Ver detalles</a>
+        </div>
+    </div>
+
     <aside id="carritoPanel">
         <button id="botonCerrarCarrito"><i class="fa-solid fa-circle-xmark"></i></button>
         <h1 class="tituloCarrito">Carrito de compras</h1>
@@ -225,6 +258,7 @@
             <button class="botonFinalizarCompra">Finalizar compra</button>
         </section>
     </aside>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -246,7 +280,10 @@
             <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></i> - LinkedIn</a></li>
         </ul>
     </footer>
+
 </body>
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
+<script src="../js/calendario.js"></script>
+
 </html>
