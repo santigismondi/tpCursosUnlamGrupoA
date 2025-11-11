@@ -14,7 +14,6 @@ if (id !== null && !isNaN(id) && cursos[id - 1]) {
     AgregarContenidoCursos(0);
 }
 
-
 function AgregarContenidoCursos(cursoSeleccionado) {
     const curso = cursos[cursoSeleccionado];
     console.log(cursos);
@@ -29,6 +28,21 @@ function AgregarContenidoCursos(cursoSeleccionado) {
     document.getElementById("precio").textContent = `${curso.precio.valor} ${curso.precio.moneda}`;
     document.getElementById("dedicacion").textContent = curso.dedicacion;
     document.getElementById("descripcion").textContent = curso.descripcion;
+
+    // Botón Agregar al Carrito
+    const contenedorBoton = document.getElementById("contenedorBotonCarrito");
+    contenedorBoton.innerHTML = ""; // limpiar por si se recarga la página
+
+    const botonAgregar = document.createElement("a");
+    botonAgregar.classList.add("agregarCurso");
+    botonAgregar.textContent = "Inscribirse";
+    botonAgregar.dataset.id = curso.id;
+
+    botonAgregar.addEventListener("click", () => {
+        agregarAlCarrito(curso);
+    });
+
+    contenedorBoton.appendChild(botonAgregar);
 
     // Requisitos del curso
     const listaRequisitos = document.getElementById("requisitos");
@@ -57,7 +71,7 @@ function AgregarContenidoCursos(cursoSeleccionado) {
     resumenAcordeon.textContent = "Contenidos por clase";
     acordeon.appendChild(resumenAcordeon);
 
-    // Recorremos las clases del curso
+    // Recorrer las clases del curso
     curso.clases.forEach((clase) => {
         const detalleClase = document.createElement("details");
         detalleClase.classList.add("contenido");
@@ -87,7 +101,6 @@ function AgregarContenidoCursos(cursoSeleccionado) {
 
                 detalleVideo.appendChild(pTituloVideo);
                 detalleVideo.appendChild(pDuracionVideo);
-
                 detalleClase.appendChild(detalleVideo);
             });
         }
