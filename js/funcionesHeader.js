@@ -149,25 +149,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (contenedorDeCursosCarrito) {
-        contenedorDeCursosCarrito.addEventListener('click', function (event) {
-            const botonEliminar = event.target.closest('.eliminarDelCarrito');
+if (contenedorDeCursosCarrito) {
+    contenedorDeCursosCarrito.addEventListener('click', function (event) {
+        const botonEliminar = event.target.closest('.eliminarDelCarrito');
 
-            if (botonEliminar) {
-                const idParaEliminar = parseInt(botonEliminar.dataset.id);
+        if (botonEliminar) {
+            const idParaEliminar = parseInt(botonEliminar.dataset.id);
 
-                usuarioActivo.carrito = usuarioActivo.carrito.filter(item => item.id !== idParaEliminar);
+            // 🔹 Recuperamos el usuario más reciente desde sessionStorage
+            let usuarioActivoActualizado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
 
-                sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivo));
+            if (!usuarioActivoActualizado) return;
 
-                actualizarUsuarioEnLocalStorage(usuarioActivo);
+            // 🔹 Filtramos el carrito y actualizamos datos
+            usuarioActivoActualizado.carrito = usuarioActivoActualizado.carrito.filter(item => item.id !== idParaEliminar);
 
-                mostrarCursosEnCarrito();
+            // 🔹 Guardamos los cambios en sessionStorage y localStorage
+            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivoActualizado));
+            actualizarUsuarioEnLocalStorage(usuarioActivoActualizado);
 
-                actualizarContador(usuarioActivo.carrito.length);
-            }
-        });
-    }
+            // 🔹 Actualizamos la vista
+            mostrarCursosEnCarrito();
+            actualizarContador(usuarioActivoActualizado.carrito.length);
+        }
+    });
+}
     //Buscador
     function realizarBusqueda(event) {
         event.preventDefault();
