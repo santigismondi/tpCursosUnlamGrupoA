@@ -1,6 +1,5 @@
 const datosCursos = DATOS_CURSOS;
 const containerCursos = document.getElementById("cursosContainerInicio");
-const botonAgregar = document.getElementsByClassName("agregarCurso");
 
 document.addEventListener("DOMContentLoaded", () => {
     containerCursos.innerHTML = "";
@@ -8,14 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     datosCursos.forEach(curso => {
         const contenedorCurso = document.createElement("section");
         contenedorCurso.classList.add("curso");
-
         contenedorCurso.dataset.id = curso.id;
 
         const imgCurso = document.createElement("img");
         imgCurso.classList.add("imgCurso");
         imgCurso.src = curso.imagenUrl;
         imgCurso.alt = `Portada del curso ${curso.titulo}`;
-        
+
         const nombreCurso = document.createElement("h3");
         nombreCurso.classList.add("nombreCurso");
         nombreCurso.textContent = curso.titulo;
@@ -23,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const duracionCurso = document.createElement("span");
         duracionCurso.classList.add("duracionCurso");
         duracionCurso.textContent = `Dedicación: ${curso.dedicacion}`;
-        
+
         const precioCurso = document.createElement("span");
         precioCurso.classList.add("precioCurso");
         precioCurso.textContent = `Precio: $${curso.precio.valor} ${curso.precio.moneda}`;
-        
+
         const detallesCurso = document.createElement("a");
         detallesCurso.classList.add("detallesCurso");
         detallesCurso.textContent = "Ver Detalles";
@@ -36,6 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const agregarCurso = document.createElement("button");
         agregarCurso.classList.add("agregarCurso");
         agregarCurso.textContent = "Agregar al Carrito";
+
+        agregarCurso.addEventListener("click", () => {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            const cursoExistente = carrito.find(item => item.id === curso.id);
+
+            if (!cursoExistente) {
+                carrito.push(curso);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+            }
+
+        });
 
         containerCursos.appendChild(contenedorCurso);
         contenedorCurso.appendChild(imgCurso);
@@ -46,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedorCurso.appendChild(agregarCurso);
     });
 
-    //Slider
+    // Slider
     const sliderWrapper = document.querySelector('.slider-wrapper');
     const slides = document.querySelectorAll('.imagenSlider');
     const nextBtn = document.getElementById('next-slide');
@@ -54,38 +63,29 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoSlideTimer;
     let slideActual = 0;
     const totalSlides = slides.length;
-    
+
     function actualizarSlider() {
         sliderWrapper.style.transform = `translateX(-${slideActual * 100}%)`;
     }
 
     function resetAutoSlideTimer() {
         clearInterval(autoSlideTimer);
-        
         autoSlideTimer = setInterval(() => {
             nextBtn.click();
         }, 5000);
     }
 
     nextBtn.addEventListener('click', () => {
-        if (slideActual < totalSlides - 1) {
-            slideActual++;
-        } else {
-            slideActual = 0;
-        }
+        slideActual = (slideActual + 1) % totalSlides;
         actualizarSlider();
         resetAutoSlideTimer();
     });
 
     prevBtn.addEventListener('click', () => {
-        if (slideActual > 0) {
-            slideActual--;
-        } else {
-            slideActual = totalSlides - 1;
-        }
+        slideActual = (slideActual - 1 + totalSlides) % totalSlides;
         actualizarSlider();
         resetAutoSlideTimer();
     });
 
     resetAutoSlideTimer();
-})
+});

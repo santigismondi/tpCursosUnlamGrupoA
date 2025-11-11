@@ -7,7 +7,7 @@
     <title>EdUNLaM</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/carrito.css">
-    <link rel="stylesheet" href="../css/inscripcionCurso.css">
+    <link rel="stylesheet" href="../css/pantallaPagos.css">
     <link rel="shortcut icon" href="../recursos/img/logoUnlamAzul.png">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
@@ -17,13 +17,11 @@
         <nav class="navegador">
             <section class="logo">
                 <a class="logoDescripcion" href="../html/inicio.html">
-                    <img class="logoUnlam" 
-                    src="../recursos/img/logoUnlamAzul.png"
-                    alt="Logo de Unlam">
+                    <img class="logoUnlam" src="../recursos/img/logoUnlamAzul.png" alt="Logo de Unlam">
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
+
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -84,9 +82,14 @@
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
-    </header> 
+    </header>
 
     <main class="contenedorMain">
+
+        <h1>Resumen de tu compra</h1>
+        <section id="contenedorCarrito"></section>
+        <h2 id="totalPrecio"></h2>
+        <button id="btnPagar">Pagar</button>
 
         <section class="metodoDePago">
             <label for="" class="labelFormPago">
@@ -114,6 +117,7 @@
         </section>
 
     </main>
+
     <aside id="carritoPanel">
         <button id="botonCerrarCarrito"><i class="fa-solid fa-circle-xmark"></i></button>
         <h1 class="tituloCarrito">Carrito de compras</h1>
@@ -123,6 +127,7 @@
             <a href="..\html\pantallaPagos.html" class="botonFinalizarCompra">Finalizar compra</a>
         </section>
     </aside>
+
     <footer class="contenedorFooter">
         <ul class="footerList">
             <li>Gismondi Santiago</li>
@@ -149,5 +154,6 @@
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
 <script src="../js/funcionesInicio.js"></script>
+<script src="../js/pantallaPagos.js"></script>
 
 </html>
