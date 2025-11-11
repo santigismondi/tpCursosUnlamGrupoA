@@ -70,7 +70,7 @@ function validar(e) {
             console.log(cont.restarCaracteres(e))
             return
         }else if(cont.restarCaracteres(e) <= 0){
-            alert.mostrarAlerta(`* Maximo 40 caracteres`, e.target.parentElement);
+            alert.mostrarAlerta(`* Maximo 200 caracteres`, e.target.parentElement);
             return
         }
          verificacionGeneral();
