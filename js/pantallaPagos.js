@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonPagar = document.getElementById("confirmar");
     const checkConfirm = document.getElementById("confirm-toggle");
 
-    // 🔹 Leer usuario activo con carrito
+    // Leer usuario activo con carrito
     let usuarioActivo = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
 
     if (!usuarioActivo || !usuarioActivo.carrito) {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let carrito = usuarioActivo.carrito;
 
-    // --- Renderizar carrito ---
+    // Renderizar carrito
     function renderizarCarrito() {
         contenedorCarrito.innerHTML = "";
         let total = 0;
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrecio.textContent = `Total a pagar: $${total}`;
     }
 
-    // --- Eliminar curso individual ---
+    // Eliminar curso individual
     contenedorCarrito.addEventListener("click", (e) => {
         if (e.target.classList.contains("eliminarCurso")) {
             const index = e.target.dataset.index;
             carrito.splice(index, 1);
 
-            // 🔹 Actualizar en sessionStorage y localStorage
+            // Actualizar en sessionStorage y localStorage
             usuarioActivo.carrito = carrito;
             sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActivo));
             actualizarUsuarioEnLocalStorage(usuarioActivo);
@@ -61,14 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // --- Confirmar pago ---
+    // Confirmar pago 
     if (botonPagar) {
         botonPagar.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
 
             const metodoSeleccionado = document.querySelector('input[name="pago"]:checked');
-
             if (!metodoSeleccionado) {
                 alert("⚠️ Por favor seleccioná un método de pago antes de confirmar.");
                 return;
@@ -78,13 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const numeroTarjeta = document.querySelector('input[placeholder="XXXX XXXX XXXX XXXX"]').value.trim();
                 const cvv = document.querySelector('input[placeholder="CVV"]').value.trim();
 
-                if (!numeroTarjeta || !cvv) {
+                const soloNumerosTarjeta = numeroTarjeta.replace(/\D/g, "");
+                const soloNumerosCVV = cvv.replace(/\D/g, "");
+
+                if (!soloNumerosTarjeta || !soloNumerosCVV) {
                     alert("⚠️ Por favor completá los datos de tu tarjeta antes de confirmar.");
                     return;
                 }
-
-                const soloNumerosTarjeta = numeroTarjeta.replace(/\D/g, "");
-                const soloNumerosCVV = cvv.replace(/\D/g, "");
 
                 if (soloNumerosTarjeta.length !== 16) {
                     alert("⚠️ El número de tarjeta debe tener 16 dígitos.");
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // 🔹 Mover los cursos del carrito a cursosInscripto (sin duplicar)
+            // Mover cursos del carrito a cursosInscripto (sin duplicar)
             const idsActuales = usuarioActivo.cursosInscripto.map(c => c.id);
             usuarioActivo.carrito.forEach(curso => {
                 if (!idsActuales.includes(curso.id)) {
@@ -105,23 +104,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            // 🔹 Vaciar carrito en ambos almacenamientos
+            // Vaciar carrito
             usuarioActivo.carrito = [];
             sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActivo));
             actualizarUsuarioEnLocalStorage(usuarioActivo);
-
             renderizarCarrito();
 
-            alert("Pago realizado con éxito. ¡Gracias por tu compra!");
-            if (checkConfirm) checkConfirm.checked = false;
+            // Mostrar modal de confirmación
+            const modal = document.getElementById("modalPago");
+            const detalle = document.getElementById("detallePagoCursos");
+            const cerrar = document.getElementById("cerrarModalPago");
+            const btnIrInicio = document.getElementById("btnIrInicio");
 
-            setTimeout(() => {
+            // Mostrar detalles de cursos comprados
+            detalle.innerHTML = usuarioActivo.cursosInscripto.slice(-3).map(curso => `
+            <div>
+                <h3>${curso.titulo}</h3>
+                <p>Precio: $${curso.precio.valor}</p>
+            </div>
+        `).join("");
+
+            modal.style.display = "block";
+
+            cerrar.onclick = () => modal.style.display = "none";
+            btnIrInicio.onclick = () => {
+                modal.style.display = "none";
                 window.location.href = "../html/inicio.html";
-            }, 400);
+            };
+
+            window.onclick = (e) => {
+                if (e.target === modal) modal.style.display = "none";
+            };
         });
     }
 
-    // 🔹 Función para sincronizar usuarios en localStorage
+    //  Función para sincronizar usuarios en localStorage
     function actualizarUsuarioEnLocalStorage(usuarioActualizado) {
         let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
         const index = usuarios.findIndex(user => user.nombreUsuario === usuarioActualizado.nombreUsuario);
