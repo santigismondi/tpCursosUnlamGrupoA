@@ -70,6 +70,21 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        // 🔹 Verificar si ya está inscripto en el curso
+        const yaInscripto = usuarioActivo.cursosInscripto.some(item => item.id === curso.id);
+        if (yaInscripto) {
+            alert("Ya estás inscripto en este curso.");
+            return;
+        }
+
+        // 🔹 Verificar si ya está en el carrito
+        const yaEnCarrito = usuarioActivo.carrito.some(item => item.id === curso.id);
+        if (yaEnCarrito) {
+            alert("El curso ya está en tu carrito.");
+            return;
+        }
+
+        // 🔹 Si no está ni inscripto ni en el carrito, agregarlo
         const itemEnCarrito = {
             id: curso.id,
             titulo: curso.titulo,
@@ -78,18 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
             dedicacion: curso.dedicacion
         };
 
-        const yaExiste = usuarioActivo.carrito.some(item => item.id === curso.id);
+        usuarioActivo.carrito.push(itemEnCarrito);
 
-        if (!yaExiste) {
-            usuarioActivo.carrito.push(itemEnCarrito);
+        // 🔹 Actualizar en sessionStorage y localStorage
+        sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActivo));
+        actualizarUsuarioEnLocalStorage(usuarioActivo);
 
-            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivo));
-
-            actualizarUsuarioEnLocalStorage(usuarioActivo);
-
-        } else {
-            alert("El curso ya está en tu carrito.");
-        }
         actualizarContador(usuarioActivo.carrito.length);
     }
 
@@ -149,31 +158,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-if (contenedorDeCursosCarrito) {
-    contenedorDeCursosCarrito.addEventListener('click', function (event) {
-        const botonEliminar = event.target.closest('.eliminarDelCarrito');
+    if (contenedorDeCursosCarrito) {
+        contenedorDeCursosCarrito.addEventListener('click', function (event) {
+            const botonEliminar = event.target.closest('.eliminarDelCarrito');
 
-        if (botonEliminar) {
-            const idParaEliminar = parseInt(botonEliminar.dataset.id);
+            if (botonEliminar) {
+                const idParaEliminar = parseInt(botonEliminar.dataset.id);
 
-            // 🔹 Recuperamos el usuario más reciente desde sessionStorage
-            let usuarioActivoActualizado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+                // 🔹 Recuperamos el usuario más reciente desde sessionStorage
+                let usuarioActivoActualizado = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
 
-            if (!usuarioActivoActualizado) return;
+                if (!usuarioActivoActualizado) return;
 
-            // 🔹 Filtramos el carrito y actualizamos datos
-            usuarioActivoActualizado.carrito = usuarioActivoActualizado.carrito.filter(item => item.id !== idParaEliminar);
+                // 🔹 Filtramos el carrito y actualizamos datos
+                usuarioActivoActualizado.carrito = usuarioActivoActualizado.carrito.filter(item => item.id !== idParaEliminar);
 
-            // 🔹 Guardamos los cambios en sessionStorage y localStorage
-            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivoActualizado));
-            actualizarUsuarioEnLocalStorage(usuarioActivoActualizado);
+                // 🔹 Guardamos los cambios en sessionStorage y localStorage
+                sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioActivoActualizado));
+                actualizarUsuarioEnLocalStorage(usuarioActivoActualizado);
 
-            // 🔹 Actualizamos la vista
-            mostrarCursosEnCarrito();
-            actualizarContador(usuarioActivoActualizado.carrito.length);
-        }
-    });
-}
+                // 🔹 Actualizamos la vista
+                mostrarCursosEnCarrito();
+                actualizarContador(usuarioActivoActualizado.carrito.length);
+            }
+        });
+    }
     //Buscador
     function realizarBusqueda(event) {
         event.preventDefault();
