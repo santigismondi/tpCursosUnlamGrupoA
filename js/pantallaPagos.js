@@ -116,22 +116,37 @@ document.addEventListener("DOMContentLoaded", () => {
             const cerrar = document.getElementById("cerrarModalPago");
             const btnIrInicio = document.getElementById("btnIrInicio");
 
-            // Mostrar detalles de cursos comprados
-            detalle.innerHTML = usuarioActivo.cursosInscripto.slice(-3).map(curso => `
-            <div>
-                <h3>${curso.titulo}</h3>
-                <p>Precio: $${curso.precio.valor}</p>
+            // 🔹 Mostrar SOLO los cursos recién comprados (los que estaban en el carrito antes del pago)
+            detalle.innerHTML = "";
+
+            if (carrito.length === 0) {
+                detalle.innerHTML = "<p>No se encontraron cursos recién comprados.</p>";
+            } else {
+                detalle.innerHTML = carrito.map(cursoCarrito => {
+                    const cursoFull = (typeof DATOS_CURSOS !== 'undefined')
+                        ? DATOS_CURSOS.find(c => c.id === cursoCarrito.id)
+                        : null;
+
+                    const descripcion = cursoFull?.descripcion || cursoCarrito.descripcion || "Sin descripción disponible";
+                    const precio = cursoFull?.precio?.valor ?? cursoCarrito.precio?.valor ?? "No especificado";
+
+                    return `
+            <div class="cursoModal">
+                <h3>${cursoCarrito.titulo}</h3>
+                <p>${descripcion}</p>
             </div>
-        `).join("");
+        `;
+                }).join("");
+            }
 
             modal.style.display = "block";
 
+            // Botones del modal
             cerrar.onclick = () => modal.style.display = "none";
             btnIrInicio.onclick = () => {
                 modal.style.display = "none";
                 window.location.href = "../html/inicio.html";
             };
-
             window.onclick = (e) => {
                 if (e.target === modal) modal.style.display = "none";
             };
