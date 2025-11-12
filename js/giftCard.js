@@ -13,6 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const opcionesUbicacion = document.querySelectorAll('input[name="Ubicación"]'); 
     const opcionesFondo = document.querySelectorAll('input[name="fondo"]');
 
+
+    const form = document.getElementById('giftCardForm'); 
+
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            if (inputMonto) {
+                const monto = inputMonto.value.trim();
+                
+                localStorage.setItem('montoGiftCard', monto);
+                
+
+                
+                console.log('Monto  guardados antes de la redirección.');
+            } else {
+                console.error('Error: No se encontró el campo de monto.');
+                event.preventDefault();
+            }
+        });
+    } else {
+        console.error('Advertencia: No se encontró el formulario con ID "giftCardForm". Asegúrate de que exista.');
+    }
+
     const mapaClasesUbicacion = {
         'derecha-abajo': 'derecha-abajo',
         'derecha-arriba': 'derecha-arriba',

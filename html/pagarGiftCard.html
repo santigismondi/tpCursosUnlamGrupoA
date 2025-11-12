@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdUNLaM</title>
+    <title>EdUNLaM - Pagar Gift Card</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/carrito.css">
     <link rel="stylesheet" href="../css/pagarGiftCard.css">
@@ -21,7 +21,6 @@
                     <span>EdUNLaM</span>
                 </a>
             </section>
-     
             <ul class="headerList">
                 <li class="headerListItem">
                     <a class="botonNav" href="../html/inicio.html">
@@ -83,30 +82,51 @@
             </form>
         </section>
     </header> 
+    
     <main class="contenedorMain">
         <h1 class="tituloRegala">Regala un curso!</h1>
+        
+        <h2>Resumen de tu Gift Card</h2>
+        
+        <h4 id="totalPrecio">Total a pagar: <span id="montoFinal">...</span></h4>
+        
         <section class="usuarioRegaloContainer">
             <label for="usuarioRegalo" class="titulosForm">Elegi a quien queres regalar el curso:</label>
-            <input type="email" id="usuarioRegalo" name="usuarioRegalo" class="inputFormEmail" placeholder="Email del destinatario" required>                    
+            <input type="email" id="usuarioRegalo" name="usuarioRegalo" class="inputFormEmail" placeholder="Email del destinatario" required> 
         </section>
+        
         <section class="metodoDePago">
-            <form action="">
+            <form id="pagoGiftCardForm">
                 <label for="" class="labelFormPago">
-                    <input name="pago" type="radio" class="inputFormPago" value="tarjeta">
+                    <input name="pago" type="radio" class="inputFormPago" value="tarjeta" checked>
                     Tarjeta de credito
-                    <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX" required>
+                    <input name="pagoTarjeta" type="text" class="inputForm" placeholder="XXXX XXXX XXXX XXXX" required>
                     <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV" required>
                 </label>
-                <!-- <p id="numeroTarjetaCargada"></p> -->
+                
                 <label for="" class="labelFormPago">
                     <input name="pago" type="radio" class="inputFormPago" value="transferencia">
                     Transferencia Bancaria
                     <span class="CBU">CBU: 0000111166665555</span>
                 </label>
-                <button class="btnEnviar">Envia este curso!</button>
+                
+                <section class="botones">
+                    <a href="./giftCard.html" id="cancelar" class="btn">Cancelar</a>
+                    <button id="confirmar" class="btn" type="button">Confirmar Pago</button>
+                </section>
             </form>
         </section>
     </main>
+    
+    <div id="modalPago" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrarModalPago" class="cerrar">&times;</span>
+            <h2>¡Pago Exitoso! 🎉</h2>
+            <div id="detallePagoCursos"></div> 
+            <button id="btnIrInicio">Volver a Inicio</button>
+        </div>
+    </div>
+    
     <aside id="carritoPanel">
         <button id="botonCerrarCarrito"><i class="fa-solid fa-circle-xmark"></i></button>
         <h1 class="tituloCarrito">Carrito de compras</h1>
@@ -141,4 +161,5 @@
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
 <script src="../js/funcionesInicio.js"></script>
+<script src="../js/pagarGiftCard.js"></script>
 </html>
