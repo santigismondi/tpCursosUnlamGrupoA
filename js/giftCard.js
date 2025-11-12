@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputNombreDestinatario = document.getElementById('nombreGiftCard');
     const inputMonto = document.getElementById('monto');
     const opcionesUbicacion = document.querySelectorAll('input[name="Ubicación"]'); 
-    const opcionesFondo = document.querySelectorAll('input[name="fondo"]'); // ¡NUEVO!
+    const opcionesFondo = document.querySelectorAll('input[name="fondo"]');
 
     const mapaClasesUbicacion = {
         'derecha-abajo': 'derecha-abajo',

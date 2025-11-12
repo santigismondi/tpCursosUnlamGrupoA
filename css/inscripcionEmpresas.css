@@ -104,6 +104,179 @@ h1 {
 }
 
 
+.formulario-inscripcion {
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    background: #f0f0f0;
+}
+
+.formulario-inscripcion h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.selector-tipo {
+    margin-bottom: 20px;
+}
+
+.selector-tipo label {
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+#tipoInscripcion {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.fila-personal {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.fila-personal input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.fila-costo-base {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 600;
+}
+
+.fila-costo-base #costoFijoPersona {
+    margin-left: 5px;
+    color: #333;
+}
+
+#formularioEmpresa .fila-persona {
+    grid-template-columns: repeat(5, 1fr) auto; 
+    display: grid;
+    gap: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#formularioEmpresa .fila-persona input {
+    margin: 0;
+    width: 100%;
+}
+
+.controles-pago-personal {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn-inscribirse {
+    padding: 10px 25px;
+    background-color: #6c757d; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto; 
+}
+
+.btn-inscribirse:hover {
+    background-color: #5a6268;
+}
+
+.controles-pago-personal .monto-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 15px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resumenPersonas p {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.total-resumen {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+
 
 @media (max-width: 768px) {
     

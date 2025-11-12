@@ -83,28 +83,50 @@
             </form>
         </section>
     </header> 
-    <main class="contenedorMain">
-        <h1>TÍTULO CURSO</h1>
-        <p class="subtitulo">INSCRIPCIÓN</p>
+        <main class="contenedorMain">
+    <h1>TÍTULO CURSO</h1>
+    <p class="subtitulo">INSCRIPCIÓN</p>
 
-        <form id="formularioInscripcion">
-            <div id="contenedorPersonas">
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
-                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
-                </div>
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
-                    <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
-                </div>
-                <div class="fila-persona">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                    <input type="number" placeholder="DNI" min="0" required>
+    <form id="formularioInscripcion">
+        <div class="selector-tipo">
+            <label for="tipoInscripcion">Tipo de Inscripción:</label>
+            <select id="tipoInscripcion">
+                <option value="personal">Personal</option>
+                <option value="empresa">Empresa</option>
+            </select>
+        </div>
+
+        <div id="formularioPersonal" class="formulario-inscripcion">
+            <h2>Datos de Contacto</h2>
+            <div class="fila-personal">
+                <input type="text" id="nombrePersonal" placeholder="Nombre" required>
+                <input type="text" id="apellidoPersonal" placeholder="Apellido" required>
+                <input type="number" id="dniPersonal" placeholder="DNI" min="0" required>
+            </div>
+            <div class="fila-personal">
+                <input type="email" id="emailPersonal" placeholder="Email" required>
+                <input type="tel" id="telefonoPersonal" placeholder="Teléfono" required>
+            </div>
+            <div class="controles-pago-personal">
+                <span class="monto-total">$5000.-</span> <button type="submit" class="btn-inscribirse">INSCRIBIRSE</button>
+            </div>
+        </div>
+
+        <div id="formularioEmpresa" class="formulario-inscripcion hidden">
+            <h2>Inscripción de Empleados</h2>
+            
+            <div class="fila-costo-base">
+                <span class="etiqueta-costo">Costo por persona (Fijo):</span>
+                <span id="costoFijoPersona">$2000.-</span>
+            </div>
+
+           <div id="contenedorPersonas">
+                <div class="fila-persona" data-id="1">
+                    <input type="text" name="nombre[]" placeholder="Nombre" required>
+                    <input type="text" name="apellido[]" placeholder="Apellido" required>
+                    <input type="number" name="dni[]" placeholder="DNI" min="0" required>
+                    <input type="email" name="email[]" placeholder="Email" required>
+                    <input type="tel" name="telefono[]" placeholder="Teléfono" required>
                     <button type="button" class="btn-eliminar"><i class="fas fa-minus-circle"></i></button>
                 </div>
             </div>
@@ -116,12 +138,24 @@
             </div>
 
             <div class="controles-pago">
-                <span class="monto-total">$000.-</span>
+                <span class="etiqueta-total">Total por inscripciones:</span>
+                <span class="monto-total" id="montoTotalPersonas">$2000.-</span> 
                 <button type="submit" class="btn-inscribirse">INSCRIBIRSE</button>
             </div>
-        </form>
-        
-    </main>
+        </div>
+    </form>
+</main>
+
+<div id="modalResumen" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>✅ Resumen de Inscripción</h2>
+        <p>¡Inscripción realizada con éxito!</p>
+        <div id="resumenPersonas">
+            </div>
+        <p class="total-resumen">Total pagado: <span id="totalModal"></span></p>
+    </div>
+</div>
     <aside id="carritoPanel">
         <button id="botonCerrarCarrito"><i class="fa-solid fa-circle-xmark"></i></button>
         <h1 class="tituloCarrito">Carrito de compras</h1>
@@ -155,4 +189,5 @@
 </body>
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
+<script src="../js/inscripcionEmpresa.js"></script>
 </html>

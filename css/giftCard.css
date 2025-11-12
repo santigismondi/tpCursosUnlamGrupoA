@@ -214,7 +214,6 @@ label[for="izquierda-arriba"]::after {
     border: 1px solid #333; 
 }
 
-/* --- Nuevas Clases de Fondo para .cuadrado --- */
 
 .cuadrado.celeste {
     background-color: lightblue;
@@ -226,7 +225,6 @@ label[for="izquierda-arriba"]::after {
 
 .cuadrado.negro {
     background-color: black;
-    /* Al cambiar a fondo negro, las letras deben ser blancas para ser visibles */
     color: white; 
 }
 
@@ -238,10 +236,9 @@ label[for="izquierda-arriba"]::after {
     background-color: gold;
 }
 
-/* IMPORTANTE: Ajustar el color del texto del .cuadrado-monto cuando el fondo es negro */
 .cuadrado.negro .cuadrado-monto {
-    background-color: white; /* Invierte el color del monto de fondo para contraste */
-    color: black;           /* Invierte el color del texto del monto */
+    background-color: white; 
+    color: black; 
 }
 
 .cuadrado h1 {
