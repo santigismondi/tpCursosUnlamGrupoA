@@ -1,3 +1,4 @@
+import { Dialog } from './Dialog.js';
 document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formRegistro');
     const btnRegistrar = document.getElementById('btnRegistrar');
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return esValido;
     };
-
+    const dialogo = new Dialog();
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -136,20 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const yaExiste = usuariosGuardados.some(user => user.nombreUsuario === nuevoUsuario.nombreUsuario);
         if (yaExiste) {
-            alert('Ese nombre de usuario ya está registrado');
+           // alert('Ese nombre de usuario ya está registrado');
+            dialogo.render('Ese nombre de usuario ya está registrado');
             return;
         }
 
         const emailYaExiste = usuariosGuardados.some(user => user.email === nuevoUsuario.email);
         if (emailYaExiste) {
-            alert('Ese email ya está registrado');
+           // alert('Ese email ya está registrado');
+            dialogo.render('Ese email ya está registrado');
             return;
         }
 
         usuariosGuardados.push(nuevoUsuario);
         localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
-
         alert('Registro exitoso! Ahora podés iniciar sesión.');
+        dialogo.render('Registro exitoso! Ahora podés iniciar sesión.');
         window.location.href = '../index.html';
     });    
 });

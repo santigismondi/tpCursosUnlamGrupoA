@@ -94,3 +94,35 @@ label{
     border: #ba0000 solid 2px;
     transition: 0.3s;
 }
+.js-modal{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.8em;    
+    color:#1d45e8;;
+    border:0.05em solid rgb(249, 250, 253);
+    background-color: #262b32;
+    box-shadow: #e1e7e7 5px;
+   max-width: 20vw;
+    min-height: 20vh;
+    top: 30%;
+    left: 35%;
+    padding: auto;
+    border-radius: 5px;    
+}
+.contenedorDialog{
+    padding: 0.4em;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+.cerrarDialog{
+    font-size: 0.6em;
+    background-color: #006aff;
+    border:2px solid white;
+    color: white;
+    padding: 0.6em;
+    border-radius: 5px;
+    
+}

@@ -122,10 +122,8 @@ main {
     min-height: 20vh;
     top: 50%;
     left: 35%;
-   padding: auto;
-
-    border-radius: 5px;
-    
+    padding: auto;
+    border-radius: 5px;    
 }
 .contenedorDialog{
     padding: 0.4em;
