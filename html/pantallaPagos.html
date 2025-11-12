@@ -69,6 +69,7 @@
                 </li>
             </ul>
         </nav>
+
         <section class="elementosHeader">
             <form action="" class="formularioBuscador">
                 <label for="" class="labelBuscar">Buscar</label>
@@ -82,39 +83,38 @@
                 <a href="./resultadosBusqueda.html"><i id="iconoBuscar" class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         </section>
+
     </header>
 
     <main class="contenedorMain">
 
-        <h1>Resumen de tu compra</h1>
-        <section id="contenedorCarrito"></section>
-        <h2 id="totalPrecio"></h2>
-        <button id="btnPagar">Pagar</button>
-
-        <section class="metodoDePago">
-            <label for="" class="labelFormPago">
-                <input name="pago" type="radio" class="inputFormPago" value="tarjeta">
-                Tarjeta de credito
-                <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
-                <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
-            </label>
-            <!-- <p id="numeroTarjetaCargada"></p> -->
-            <label for="" class="labelFormPago">
-                <input name="pago" type="radio" class="inputFormPago" value="transferencia">
-                Transferencia Bancaria
-                <span class="CBU">CBU: 0000111166665555</span>
-            </label>
+        <section class="listaCursos">
+            <h1>Resumen de tu compra</h1>
+            <section id="contenedorCarrito"></section>
+            <h2 id="totalPrecio"></h2>
         </section>
 
-        <section class="botones">
-            <a href="../html/inicio.html" class="btn" id="cancelar">Cancelar</a>
-            <label for="confirm-toggle" class="btn" id="confirmar">Confirmar inscripción</label>
-            <input type="checkbox" id="confirm-toggle">
-            <div class="mensaje">
-                <h2>✅ Inscripto correctamente</h2>
-                <a href="../html/detalleCurso.html" class="cerrar">Cerrar</a>
-            </div>
-        </section>
+        <form id="formPago" action="#" method="post">
+            <section class="metodoDePago">
+                <label class="labelFormPago">
+                    <input name="pago" type="radio" class="inputFormPago" value="tarjeta" required>
+                    Tarjeta de credito
+                    <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
+                    <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
+                </label>
+
+                <label class="labelFormPago">
+                    <input name="pago" type="radio" class="inputFormPago" value="transferencia" required>
+                    Transferencia Bancaria
+                    <span class="CBU">CBU: 0000111166665555</span>
+                </label>
+            </section>
+
+            <section class="botones">
+                <a href="../html/inicio.html" class="btn" id="cancelar">Cancelar</a>
+                <button type="button" class="btn" id="confirmar">Confirmar inscripción</button>
+            </section>
+        </form>
 
     </main>
 
@@ -151,6 +151,7 @@
     </footer>
 
 </body>
+
 <script src="../json-data/cursos.js"></script>
 <script src="../js/funcionesHeader.js"></script>
 <script src="../js/funcionesInicio.js"></script>
