@@ -13,6 +13,9 @@
 }
 
 .contenedorMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
 }
 
@@ -58,8 +61,8 @@
     border: 1px solid #0082AD;
     border-radius: 1em;
     height: 15em;
+    width: 80%;
     align-items: center;
-    margin-left: 5em;
     margin-bottom: 5em;
     background-color: #1D222E;
 }
@@ -266,7 +269,7 @@ details details p {
     }
 
     .portadaCurso {
-    width: 40vh;
+    width: 100%;
 }
 }
 
@@ -321,6 +324,7 @@ details details p {
         padding-top: 1em;
         margin-left: 0;
         margin-bottom: 3em;
+        width: 80%;
     }
 
     .imgDocente {
@@ -342,10 +346,19 @@ details details p {
 
     .curso {
         width: 80%;
+        flex: 0 0 calc((100% - 1rem) / 1);
     }
 
     .flecha {
         display: none;
+    }
+
+    .detallesCurso {
+        font-size: 0.5em;
+    }
+
+    .contenedor-cursos {
+        width: 90%;
     }
 
 }
