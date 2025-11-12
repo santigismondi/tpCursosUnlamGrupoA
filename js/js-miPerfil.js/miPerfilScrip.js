@@ -8,16 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = usuarios.email;
     const password = usuarios.password
 
+    document.querySelector("#nombre-usuario").textContent = nombre;
     document.querySelector("#nombre").textContent = nombre;
     document.querySelector("#apellido").textContent = apellido;
     document.querySelector("#email").textContent = email;
     document.querySelector("#password").textContent = password;
-
-
-
-
-
-
 
 })
 
